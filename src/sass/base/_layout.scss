@@ -1,0 +1,16 @@
+$max-container-width: rem-calc(2600);
+$padding: 3vw;
+
+
+%padded-container {
+  width: 100%;
+  max-width: $max-container-width;
+  padding-left: $padding;
+  padding-right: $padding;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padded-container {
+  @extend %padded-container;
+}

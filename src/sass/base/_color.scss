@@ -1,0 +1,23 @@
+$black: #000000;
+$white: #ffffff;
+$gray-1: #2c2c2c;
+$gray-2: #939191;
+$gray-3: #cccccc;
+
+$colors: (
+  "black": $black,
+  "white": $white,
+  "gray-1": $gray-1,
+  "gray-2": $gray-2,
+  "gray-3": $gray-3,
+);
+
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value;
+  }
+
+  .c-#{$color} {
+    color: $value;
+  }
+}

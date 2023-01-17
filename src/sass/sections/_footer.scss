@@ -1,0 +1,123 @@
+.footer {
+  // @include xy-grid-container(full);
+  @extend %padded-container;
+  padding-top: rem-calc(64);
+  padding-bottom: rem-calc(64);
+  border-top: rem-calc(1) solid lighten($gray-3, 15%);
+  letter-spacing: rem-calc(-0.2);
+
+  &__wrapper,
+  .copyright {
+    @include xy-grid;
+  }
+
+  .logo,
+  .nav,
+  .social-links {
+    @include xy-cell();
+    font-weight: 100;
+
+    a {
+      color: $gray-2;
+    }
+  }
+
+  .logo {
+    margin-bottom: rem-calc(48);
+
+    @include breakpoint(medium up) {
+      @include xy-cell(3);
+    }
+  }
+
+  .nav {
+    @include breakpoint(medium up) {
+      @include xy-cell(3);
+      @include xy-cell-offset(1);
+    }
+  }
+
+  .social-links {
+    @include breakpoint(medium up) {
+      @include xy-cell(5);
+      text-align: right;
+    }
+
+
+    li {
+      @include breakpoint(medium up) {
+        display: inline-block;
+        padding-left: $global-padding;
+      }
+    }
+  }
+
+  .copyright {
+    border-top: rem-calc(1) solid lighten($gray-3, 15%);
+    padding-top: rem-calc(16);
+    margin-top: rem-calc(16);
+    font-size: 80%;
+    color: $gray-3;
+  }
+}
+
+.footer2 {
+  @extend %padded-container;
+  text-align: center;
+  margin-top: rem-calc(60);
+  margin-bottom: rem-calc(60);
+
+  &__wrapper {
+    @include xy-grid;
+  }
+
+  .logo {
+    @include xy-cell();
+    margin-bottom: rem-calc(24);
+
+    img {
+      max-width: rem-calc(100);
+
+      @include breakpoint(medium up) {
+        max-width: rem-calc(170);
+      }
+    }
+  }
+
+  .social-links {
+    @include xy-cell();
+    font-weight: 100;
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: rem-calc(2);
+      font-size: 80%;
+
+      @include breakpoint(medium up) {
+        font-size: 90%;
+      letter-spacing: rem-calc(3);
+      }
+    }
+
+    a {
+      color: $gray-2;
+      padding-left: rem-calc(4);
+      padding-right: rem-calc(4);
+
+      @include breakpoint(medium up) {
+        padding-left: rem-calc(8);
+      padding-right: rem-calc(8);
+      }
+    }
+  }
+
+  .copyright {
+    @include xy-cell();
+    border-top: rem-calc(1) solid lighten($gray-3, 15%);
+    padding-top: rem-calc(16);
+    color: $gray-3;
+    font-size: 80%;
+    font-weight: 100;
+  }
+}

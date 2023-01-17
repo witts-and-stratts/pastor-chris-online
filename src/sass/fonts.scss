@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Spoof';
+  src: url('/assets/fonts/subset-Spoof-Regular.woff2') format('woff2'),
+      url('/assets/fonts/subset-Spoof-Regular.woff') format('woff'),
+      url('/assets/fonts/subset-Spoof-Regular.svg#Spoof-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Spoof';
+  src: url('/assets/fonts/subset-Spoof-Thin.woff2') format('woff2'),
+      url('/assets/fonts/subset-Spoof-Thin.woff') format('woff'),
+      url('/assets/fonts/subset-Spoof-Thin.svg#Spoof-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Spoof';
+  src: url('/assets/fonts/subset-Spoof-Medium.woff2') format('woff2'),
+      url('/assets/fonts/subset-Spoof-Medium.woff') format('woff'),
+      url('/assets/fonts/subset-Spoof-Medium.svg#Spoof-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}

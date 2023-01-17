@@ -1,0 +1,18 @@
+{
+  "exclude": ["./node_modules/**", "./cms", "./backend"],
+  "compilerOptions": {
+    "outDir": "./dist/assets/js",
+    "noImplicitAny": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    // "esModuleInterop": true,
+    // "declaration": true,
+    // "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2015",
+    "allowJs": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./src/ts/typings"],
+  }
+}

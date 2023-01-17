@@ -1,0 +1,40 @@
+@import "base/color";
+@import "settings";
+@import "foundation";
+@import "components/iconfonts";
+
+// Grids
+@include foundation-xy-grid-classes;
+
+
+// Global
+@include foundation-global-styles;
+@include foundation-typography;
+// @include foundation-forms;
+
+
+
+// Generic Components
+@include foundation-button;
+@import "components/button";
+
+// Helpers
+@include foundation-visibility-classes;
+@include foundation-flex-classes;
+@include foundation-prototype-classes;
+
+@import "base/typography";
+@import "base/layout";
+
+// @include foundation-everything($prototype: true);
+
+// Sections
+@import "sections/header";
+@import "sections/footer";
+
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+}

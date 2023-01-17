@@ -1,0 +1,29 @@
+@for $num from 1 to 5 {
+  .text-spaced-#{$num} {
+    letter-spacing: rem-calc($num);
+  }
+}
+
+@each $size, $headers in $header-styles {
+  @include breakpoint($size) {
+    @each $header, $header-defs in $headers {
+      #{$header}, .#{$header} {
+        @each $key, $value in $header-defs {
+          #{$key}: $value;
+        }
+      }
+    }
+  }
+}
+
+.subhead {
+  color: $gray-2;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-light {
+  font-weight: 100;
+}
