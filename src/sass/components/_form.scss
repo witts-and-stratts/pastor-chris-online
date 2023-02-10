@@ -1,0 +1,14 @@
+
+$-color-default: $anchor-light-10;
+$-color-hover: $anchor-light-10;
+$-color-active: $anchor;
+$-color-placeholder: $anchor-light-60;
+
+$-border-color-default: $anchor-light-60;
+$-border-color-hover: $anchor-light-40;
+$-border-color-focus: $electric-light-20;
+
+label {
+  // @extend .extra-small;
+  margin-bottom: rem-calc(4);
+}

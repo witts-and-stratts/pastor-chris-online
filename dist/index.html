@@ -4,9 +4,1945 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>Pastor Chris Online</title>
   </head>
-  <body> 
-    <h1>Pastor Chris Online</h1>
+  <body>
+        <section class="d-section">
+          <h2>Instructions</h2>
+          <hr>
+          <div class="grid-x">
+            <h6 class="cell padding-bottom-2">This project is a frontend implementation of the new Pastor Chris Online website. It is built with the following technologies:</h6>
+            <p>&nbsp;</p>
+            <div class="cell d-2-columns">
+              <h6>1. Foundation Framework</h6>
+              <p>Foundation is a responsive frontend framework. It contains CSS and HTML based design templates for typography, forms, buttons, tables, grids, navigation, and other interface components, as well as optional JavaScript extensions. Foundation is available via npm:</p>
+              <h6>2. Gulp</h6>
+              <p>Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something. Gulp is available via npm. <a href="https://gulpjs.com/" title="Gulp">Learn more about Gulp</a>.</p>
+              <h6>3. Pug</h6>
+              <p>Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers. Pug is available via npm: <a href="https://pugjs.org/" title="Pug JS">Learn more about Pug.</a></p>
+              <h6>4. Typescript</h6>
+              <p>Typescript is a typed superset of JavaScript that compiles to plain JavaScript. It is available via npm: <a href="https://www.typescriptlang.org/" title="Typescript">Learn more about Typescript.</a></p>
+              <h6>5. SASS</h6>
+              <p>SASS is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets. It is available via npm: <a href="https://sass-lang.com/" title="SASS">Learn more about SASS.</a></p>
+              <h6>6. Webpack</h6>
+              <p>Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset. It is available via npm: <a href="https://webpack.js.org/" title="Webpack">Learn more about Webpack.</a></p>
+            </div>
+          </div>
+        </section>
+        <section class="d-section">
+          <h3>Folder structure</h3>
+          <hr>
+          <div class="cell grid-x">
+            <div class="cell medium-6">
+              <div class="d-tree">
+                <ul>
+                  <li> <i class="d-folder-open"> </i>dist
+                    <ul> 
+                      <li><i class="d-folder-open"> </i>assets 
+                        <ul>
+                          <li><i class="d-folder-closed"></i>css</li>
+                          <li><i class="d-folder-closed"></i>fonts</li>
+                          <li><i class="d-folder-closed"></i>img</li>
+                          <li><i class="d-folder-closed"></i>js</li>
+                        </ul>
+                      </li>
+                      <li>index.html</li>
+                    </ul>
+                  </li>
+                  <li> <i class="d-folder-open"> </i>src
+                    <ul> 
+                      <li><i class="d-folder-closed"></i>fonts</li>
+                      <li><i class="d-folder-closed"></i>iconfonts</li>
+                      <li><i class="d-folder-closed"></i>img</li>
+                      <li><i class="d-folder-closed"></i>js</li>
+                      <li><i class="d-folder-closed"></i>pug</li>
+                      <li><i class="d-folder-closed"></i>sass
+                        <ul>
+                          <li><i class="d-folder-closed"></i>base</li>
+                          <li><i class="d-folder-closed"></i>components</li>
+                          <li><i class="d-folder-closed"></i>mixins</li>
+                          <li><i class="d-folder-closed"></i>page</li>
+                          <li><i class="d-folder-closed"></i>sections</li>
+                          <li><i class="d-file"></i>_color-creator.scss</li>
+                          <li><i class="d-file"></i>_settings.scss</li>
+                          <li><i class="d-file"></i>fonts.scss</li>
+                          <li><i class="d-file"></i>style.scss</li>
+                        </ul>
+                      </li>
+                      <li><i class="d-folder-closed"></i>ts</li>
+                      <li><i class="d-file"></i>icon-font-template.scss</li>
+                    </ul>
+                    <li><i class="d-file"></i>.gitignore</li>
+                    <li><i class="d-file"></i>gulpfile.js</li>
+                    <li><i class="d-file"></i>makefile</li>
+                    <li><i class="d-file"></i>package.json</li>
+                    <li><i class="d-file"></i>README.md</li>
+                    <li><i class="d-file"></i>tsconfig.json</li>
+                    <li><i class="d-file"></i>typings.json</li>
+                    <li><i class="d-file"></i>webpack.config.js</li>
+                    <li><i class="d-file"></i>yarn.lock</li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cell medium-6">
+              <p><strong> 1. src </strong><br>This folder contains all the source files for the project. It contains the following sub-folders: <strong>fonts, iconfonts, img, js, pug, sass, ts</strong></p>
+              <p><strong>2. fonts </strong><br>This folder holds the fonts <em>'Graphik'</em> and all other associated fonts required for the website.</p>
+              <p><strong>3. iconfonts </strong><br>This folder contains svg files which are automatically converted to iconfonts using the <code>icon-font-template.scss</code>file, during the build process. To add an svg icon to the set, simply add the svg file to this folder.</p>
+              <p><strong>4. img </strong><br>This folder contains all the images used in the project.</p>
+              <p><strong>5. pug </strong><br>This folder contains all the pug files used in the project. The <code>index.pug</code> file is the entry point for the project</p>
+              <p><strong>6. ts </strong><br>This folder contains all the typescript files used in the project. The <code>main.ts</code> file is the entry point for the typescript files. The typescript files are compiled to javascript files in the <code>dist/assets/js</code> folder.</p>
+              <p><strong>7. sass </strong><br>This folder contains all the sass files used in the project. The <code>main.scss</code> file is the entry point for the stylesheets. The sass files not starting with "_" are compiled to css files in the <code>dist/assets/css</code> folder.</p>
+              <p> <code>_settings.scss</code>contains the Foundation Framework settings. Please check the table of content for an idea of what is configurable.</p>
+              <p>The <code>base</code>folder contains extensions that implements the typography, colors, and other base styles.</p>
+              <p>The <code>mixins</code>folder contains special helper functions that can be used in the sass files. The <code>sections</code> contains styles for specific sections of the website, like the header, footer, etc.</p>
+              <p>The <code>components</code>folder contains styles for specific components of the website, like buttons, forms, etc. This is where most of the atomic styles reside.</p>
+            </div>
+          </div>
+        </section>
+        <section class="d-section">
+          <h3>Starting the project</h3>
+          <hr>
+          <div class="cell padding-top-2"> 
+            <p>Clone this repository and run the following commands in the root directory of the project: <code>npm install</code><span>or </span><code>yarn install</code><span>then run </span><code>npm start</code><span>or </span><code>yarn start</code>this will install the required node modules and start the build process. Subsequently, just run <code>npm start</code> or <code>yarn start</code> to begin the build process.</p>
+            <p><em>Quick note: all styles in the "_docs" folder, both in the sass and pug files, are not compiled to the final css and html files. They are only used for the documentation. Remember to remove or disable them before building your final frontend project.</em></p>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Typography</h2>
+          <hr>
+          <p>The typography is based on the Graphik font family. Styles are provide for the standard HTML header tags: <strong>H1 ,H2, H3, H4, H5, H6</strong>, and the <strong>p</strong> and <strong>small</strong> tags. Large styles <strong>xxlarge, xlarge and large </strong>above the <strong>H1</strong> tag Styles are also provided for <strong>small, extra-small and xx-small</strong>. As well as being able to use the standard HTML tags, you can also use the <strong>.xxlarge, .xlarge, .large .h1, .h2, .h3, .h4, .h5, .h6</strong> classes.</p>
+          <p>The types change responsively based on the screen size. To configure the properties of the typography elements, please check the <code>/src/sass/base/_typography.scss</code> file. You can also check <code>/src/sass/_settings.scss</code> file to see other configurable items.</p><small class="c-anchor-light-30">xxlarge</small>
+          <p class="xxlarge">The quick brown fox jumped over the lazy dog</p>
+          <hr class="d-hr"><small class="c-anchor-light-30">xlarge</small>
+          <p class="xlarge">The quick brown fox jumped over the lazy dog</p>
+          <hr class="d-hr"><small class="c-anchor-light-30">large</small>
+          <p class="large">The quick brown fox jumped over the lazy dog</p>
+          <hr class="d-hr"><small class="c-anchor-light-30">Header one</small>
+          <h1>The quick brown fox jumped over the lazy dog</h1>
+          <hr class="d-hr"><small class="c-anchor-light-30">Header two</small>
+          <h2>The quick brown fox jumped over the lazy dog</h2>
+          <hr class="d-hr"><small class="c-anchor-light-30">Header three</small>
+          <h3>The quick brown fox jumped over the lazy dog</h3>
+          <hr class="d-hr"><small class="c-anchor-light-30">Header four</small>
+          <h4>The quick brown fox jumped over the lazy dog</h4>
+          <hr class="d-hr"><small class="c-anchor-light-30">Header five</small>
+          <h5>The quick brown fox jumped over the lazy dog</h5>
+          <hr class="d-hr"><small class="c-anchor-light-30">Header six</small>
+          <h6>The quick brown fox jumped over the lazy dog</h6>
+          <hr class="d-hr"><small class="c-anchor-light-30">p</small>
+          <p>The quick brown fox jumped over the lazy dog</p>
+          <hr class="d-hr"><small class="c-anchor-light-30">small</small>
+          <small>The quick brown fox jumped over the lazy dog</small>
+          <hr class="d-hr"><small class="c-anchor-light-30">extra-small</small>
+          <p class="extra-small">The quick brown fox jumped over the lazy dog</p>
+          <hr class="d-hr"><small class="c-anchor-light-30">xx-small</small>
+          <p class="xx-small">The quick brown fox jumped over the lazy dog</p>
+          <hr class="d-hr">
+        </section>
+        <section class="d-section">
+          <h2>Colors</h2>
+          <hr>
+          <p>Colors are divided into <strong>Primary, Tints</strong> and <strong>Shades</strong>. All colors are available as sass variables in the <code>/src/sass/base/color.scss</code>file. The primary colors are: <code>$blue</code>, <code>$navy</code>, <code>$anchor</code>, <code>$purple</code>, <code>$black</code>, <code>$violet</code>, <code>$electric</code> and <code>$white</code>.</p>
+          <p>Colors can also be accessed using special helper classes in HTML: For example, <code class="c-blue">.c-blue</code> to change the colour to blue and <code class="bg-blue c-white">.bg-blue</code> to change the background to blue.</p>
+          <div class="grid-container full">
+            <div class="grid-x">
+              <div class="cell grid-x d-color-group">
+                <h6 class="cell">
+                   Primary Colors
+                  <hr class="d-hr">
+                </h6>
+                <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-blue"></div>
+                    <p class="d-color-box__name">blue</p><small class="d-color-box__code c-anchor-light-30">#0018f9</small>
+                  </div>
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-navy"></div>
+                    <p class="d-color-box__name">navy</p><small class="d-color-box__code c-anchor-light-30">#000080</small>
+                  </div>
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-anchor"></div>
+                    <p class="d-color-box__name">anchor</p><small class="d-color-box__code c-anchor-light-30">#3e424b</small>
+                  </div>
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-purple"></div>
+                    <p class="d-color-box__name">purple</p><small class="d-color-box__code c-anchor-light-30">#800080</small>
+                  </div>
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-black"></div>
+                    <p class="d-color-box__name">black</p><small class="d-color-box__code c-anchor-light-30">#000000</small>
+                  </div>
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-violet"></div>
+                    <p class="d-color-box__name">violet</p><small class="d-color-box__code c-anchor-light-30">#b200ed</small>
+                  </div>
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-electric"></div>
+                    <p class="d-color-box__name">electric</p><small class="d-color-box__code c-anchor-light-30">#8f00ff</small>
+                  </div>
+                  <div class="cell d-color-box">
+                    <div class="d-color-box__color bg-white"></div>
+                    <p class="d-color-box__name">white</p><small class="d-color-box__code c-anchor-light-30">#ffffff</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-x">
+              <div class="cell grid-x d-color-group">
+                <h6 class="cell">Lights
+                  <hr class="d-hr">
+                </h6>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Blue</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-light-10"></div>
+                      <p class="d-color-box__name">blue-light-10</p><small class="d-color-box__code c-anchor-light-30">#2d41ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-light-20"></div>
+                      <p class="d-color-box__name">blue-light-20</p><small class="d-color-box__code c-anchor-light-30">#606fff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-light-30"></div>
+                      <p class="d-color-box__name">blue-light-30</p><small class="d-color-box__code c-anchor-light-30">#939dff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-light-40"></div>
+                      <p class="d-color-box__name">blue-light-40</p><small class="d-color-box__code c-anchor-light-30">#c6cbff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-light-50"></div>
+                      <p class="d-color-box__name">blue-light-50</p><small class="d-color-box__code c-anchor-light-30">#f9faff</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Navy</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-light-10"></div>
+                      <p class="d-color-box__name">navy-light-10</p><small class="d-color-box__code c-anchor-light-30">#0000b3</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-light-20"></div>
+                      <p class="d-color-box__name">navy-light-20</p><small class="d-color-box__code c-anchor-light-30">#0000e6</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-light-30"></div>
+                      <p class="d-color-box__name">navy-light-30</p><small class="d-color-box__code c-anchor-light-30">#1a1aff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-light-40"></div>
+                      <p class="d-color-box__name">navy-light-40</p><small class="d-color-box__code c-anchor-light-30">#4d4dff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-light-50"></div>
+                      <p class="d-color-box__name">navy-light-50</p><small class="d-color-box__code c-anchor-light-30">#8080ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-light-60"></div>
+                      <p class="d-color-box__name">navy-light-60</p><small class="d-color-box__code c-anchor-light-30">#b3b3ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-light-70"></div>
+                      <p class="d-color-box__name">navy-light-70</p><small class="d-color-box__code c-anchor-light-30">#e6e6ff</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Anchor</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-light-10"></div>
+                      <p class="d-color-box__name">anchor-light-10</p><small class="d-color-box__code c-anchor-light-30">#555b67</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-light-20"></div>
+                      <p class="d-color-box__name">anchor-light-20</p><small class="d-color-box__code c-anchor-light-30">#6c7383</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-light-30"></div>
+                      <p class="d-color-box__name">anchor-light-30</p><small class="d-color-box__code c-anchor-light-30">#878d9b</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-light-40"></div>
+                      <p class="d-color-box__name">anchor-light-40</p><small class="d-color-box__code c-anchor-light-30">#a1a7b3</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-light-50"></div>
+                      <p class="d-color-box__name">anchor-light-50</p><small class="d-color-box__code c-anchor-light-30">##bec2ca</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-light-60"></div>
+                      <p class="d-color-box__name">anchor-light-60</p><small class="d-color-box__code c-anchor-light-30">#dadce1</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-light-70"></div>
+                      <p class="d-color-box__name">anchor-light-70</p><small class="d-color-box__code c-anchor-light-30">#f6f7f8</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Purple</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-light-10"></div>
+                      <p class="d-color-box__name">purple-light-10</p><small class="d-color-box__code c-anchor-light-30">#b300b3</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-light-20"></div>
+                      <p class="d-color-box__name">purple-light-20</p><small class="d-color-box__code c-anchor-light-30">#e600e6</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-light-30"></div>
+                      <p class="d-color-box__name">purple-light-30</p><small class="d-color-box__code c-anchor-light-30">#ff1aff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-light-40"></div>
+                      <p class="d-color-box__name">purple-light-40</p><small class="d-color-box__code c-anchor-light-30">#ff4dff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-light-50"></div>
+                      <p class="d-color-box__name">purple-light-50</p><small class="d-color-box__code c-anchor-light-30">#ff80ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-light-60"></div>
+                      <p class="d-color-box__name">purple-light-60</p><small class="d-color-box__code c-anchor-light-30">#ffb3ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-light-70"></div>
+                      <p class="d-color-box__name">purple-light-70</p><small class="d-color-box__code c-anchor-light-30">#ffe6ff</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Violet</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-light-10"></div>
+                      <p class="d-color-box__name">violet-light-10</p><small class="d-color-box__code c-anchor-light-30">#c821ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-light-20"></div>
+                      <p class="d-color-box__name">violet-light-20</p><small class="d-color-box__code c-anchor-light-30">#d454ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-light-30"></div>
+                      <p class="d-color-box__name">violet-light-30</p><small class="d-color-box__code c-anchor-light-30">#e187ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-light-40"></div>
+                      <p class="d-color-box__name">violet-light-40</p><small class="d-color-box__code c-anchor-light-30">#eebaff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-light-50"></div>
+                      <p class="d-color-box__name">violet-light-50</p><small class="d-color-box__code c-anchor-light-30">#fbedff</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Electric</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-light-10"></div>
+                      <p class="d-color-box__name">electric-light-10</p><small class="d-color-box__code c-anchor-light-30">#a533ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-light-20"></div>
+                      <p class="d-color-box__name">electric-light-20</p><small class="d-color-box__code c-anchor-light-30">#bc66ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-light-30"></div>
+                      <p class="d-color-box__name">electric-light-30</p><small class="d-color-box__code c-anchor-light-30">#d299ff</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-light-40"></div>
+                      <p class="d-color-box__name">electric-light-40</p><small class="d-color-box__code c-anchor-light-30">#e9ccff</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell grid-x d-color-group">
+                <h6 class="cell">Darks
+                  <hr class="d-hr">
+                </h6>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Blue</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-dark-10"></div>
+                      <p class="d-color-box__name">blue-dark-10</p><small class="d-color-box__code c-anchor-light-30">#0013c6</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-dark-20"></div>
+                      <p class="d-color-box__name">blue-dark-20</p><small class="d-color-box__code c-anchor-light-30">#000e93</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-dark-30"></div>
+                      <p class="d-color-box__name">blue-dark-30</p><small class="d-color-box__code c-anchor-light-30">#000960</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-blue-dark-40"></div>
+                      <p class="d-color-box__name">blue-dark-40</p><small class="d-color-box__code c-anchor-light-30">#00042d</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Navy</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-dark-10"></div>
+                      <p class="d-color-box__name">navy-dark-10</p><small class="d-color-box__code c-anchor-light-30">#00004d</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-navy-dark-20"></div>
+                      <p class="d-color-box__name">navy-dark-20</p><small class="d-color-box__code c-anchor-light-30">#00001a</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Anchor</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-dark-10"></div>
+                      <p class="d-color-box__name">anchor-dark-10</p><small class="d-color-box__code c-anchor-light-30">#27292f</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-anchor-dark-20"></div>
+                      <p class="d-color-box__name">anchor-dark-20</p><small class="d-color-box__code c-anchor-light-30">#101113</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Purple</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-dark-10"></div>
+                      <p class="d-color-box__name">purple-dark-10</p><small class="d-color-box__code c-anchor-light-30">#4d004d</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-purple-dark-20"></div>
+                      <p class="d-color-box__name">purple-dark-20</p><small class="d-color-box__code c-anchor-light-30">#1a001a</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Violet</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-dark-10"></div>
+                      <p class="d-color-box__name">violet-dark-10</p><small class="d-color-box__code c-anchor-light-30">#8c00ba</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-dark-20"></div>
+                      <p class="d-color-box__name">violet-dark-20</p><small class="d-color-box__code c-anchor-light-30">#650087</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-dark-30"></div>
+                      <p class="d-color-box__name">violet-dark-30</p><small class="d-color-box__code c-anchor-light-30">#3f0054</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-violet-dark-40"></div>
+                      <p class="d-color-box__name">violet-dark-40</p><small class="d-color-box__code c-anchor-light-30">190021</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="cell grid-x d-color-group">
+                  <h6 class="cell">Electric</h6>
+                  <div class="cell grid-x small-up-3 medium-up-4 large-up-8 grid-margin-x grid-margin-y">
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-dark-10"></div>
+                      <p class="d-color-box__name">electric-dark-10</p><small class="d-color-box__code c-anchor-light-30">#7200cc</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-dark-20"></div>
+                      <p class="d-color-box__name">electric-dark-20</p><small class="d-color-box__code c-anchor-light-30">#560099</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-dark-30"></div>
+                      <p class="d-color-box__name">electric-dark-30</p><small class="d-color-box__code c-anchor-light-30">390066</small>
+                    </div>
+                    <div class="cell d-color-box">
+                      <div class="d-color-box__color bg-electric-dark-40"></div>
+                      <p class="d-color-box__name">electric-dark-40</p><small class="d-color-box__code c-anchor-light-30">1d0033</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Pill</h2>
+          <hr>
+          <button class="pill">Pill button</button>
+          <button class="pill">Pill button <span class="icon-close"></span></button>
+          <button class="pill">Pill button <span class="icon-audio"></span></button>
+          <button class="pill">Pill button <span class="icon-chevron"></span></button>
+        </section>
+        <section class="d-section">
+          <h2>Pill Group</h2>
+          <hr>
+          <div class="pill-group">
+            <button class="pill">Pill button 1 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 2 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 3 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 4 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 5 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 6 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 7 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 8 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 9 <span class="icon-close"></span></button>
+            <button class="pill">Pill button 10 <span class="icon-close"></span></button>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Icons</h2>
+          <hr>
+          <p>Icons are svg files which are converted to <em>iconfonts</em> during the build process. The icons were designed on a 128x128 grid for proper scale adjustments and to enable consistent in all icons. For stroke-heavy icons, the stroke width at the 128 scale should be 4px. </p>
+          <p>To add an icon to the set, simply add the svg file to the <code>/src/iconfonts</code> folder.</p>
+          <p>To use an icon, simply add the class <code>.icon-{icon-name}</code> to the icon element. For example, to use the <code>audio</code> icon, add the class <code>.icon-audio</code> to the icon element. See <code>/src/sass/components/_iconfonts.scss</code> for the full list of icon classes.</p>
+        </section>
+        <section class="d-section">
+          <h5>Icon Sizes</h5>
+          <hr>
+          <p>We have special scale size classes for icons. These classes are used to scale the icons to the appropriate size. The scale sizes increases by a factor of "4" from 4 till 256. To scale an icon, simply add the class <code>.icon-{size}</code> to the icon element. For example, to scale an icon to 64px, add the class <code>.icon-64</code> to the icon element. See <code>/src/sass/components/_icons.scss</code> for the full list of scale size classes.</p>
+          <p>Scale sizes are also available for multiple breakpoints (small, medium, large). To use the scale size classes for a specific breakpoint, simply add the breakpoint name to the class. For example, to scale an icon to 64px on medium screens, add the class <code>.medium-icon-64</code> to the icon element.</span></p>
+          <div class="grid-x small-up-3 medium-up-5 large-up-8 grid-margin-x grid-margin-y">
+                <div class="cell text-center align-self-bottom"><span class="icon-audio icon-64"></span>
+                  <div><small>audio</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-bell icon-64"></span>
+                  <div><small>bell</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-calendar icon-64"></span>
+                  <div><small>calendar</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-chevron-left icon-64"></span>
+                  <div><small>chevron-left</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-chevron-right icon-64"></span>
+                  <div><small>chevron-right</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-close icon-64"></span>
+                  <div><small>close</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-devotion icon-64"></span>
+                  <div><small>devotion</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-download icon-64"></span>
+                  <div><small>download</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-filter icon-64"></span>
+                  <div><small>filter</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-healing icon-64"></span>
+                  <div><small>healing</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-live icon-64"></span>
+                  <div><small>live</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-location icon-64"></span>
+                  <div><small>location</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-mail icon-64"></span>
+                  <div><small>mail</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-multimedia icon-64"></span>
+                  <div><small>multimedia</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-praises-clap icon-64"></span>
+                  <div><small>praises-clap</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-worship icon-64"></span>
+                  <div><small>worship</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-read icon-64"></span>
+                  <div><small>read</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-search icon-64"></span>
+                  <div><small>search</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-time icon-64"></span>
+                  <div><small>time</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-upload icon-64"></span>
+                  <div><small>upload</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-whatsapp icon-64"></span>
+                  <div><small>whatsapp</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-share icon-64"></span>
+                  <div><small>share</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-play icon-64"></span>
+                  <div><small>play</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-twitter icon-64"></span>
+                  <div><small>twitter</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-facebook icon-64"></span>
+                  <div><small>facebook</small></div>
+                </div>
+                <div class="cell text-center align-self-bottom"><span class="icon-pinterest icon-64"></span>
+                  <div><small>pinterest</small></div>
+                </div>
+          </div>
+        </section>
+    <p>&nbsp;</p>
+        <section class="d-section">
+          <h2>Country Flags</h2>
+          <hr>
+          <p>Country flags are circular SVG images with a transparent background. To use the flags in your project, simply add the following code to your HTML: <code>&lt;img src="/assets/img/flags/{country-code}.svg" alt="{country-name}" /&gt;</code>. For example, to use the flag of Australia, add the following code to your HTML: <code>&lt;img src="img/flags/au.svg" alt="Australia" /&gt;</code>. See the list of country codes below or <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" target="_blank">click here</a> to view the list of country codes on Wikipedia.</p>
+        </section>
+        <section class="d-section">
+          <h5>Flag Sizes</h5>
+          <hr>
+          <p>We have special scale classes for flags. These classes are used to scale the flags to the appropriate size. The scale sizes increases by a factor of "4" from 4 till 256. To scale a flag, simply add the class <code>.flag-w{size}</code> to the icon element. For example, to scale an icon to 64px, add the class <code>.flag-w64</code> to the img tag. See <code>/src/sass/components/_flags.scss</code> for the full list of scale classes.</p>
+          <p>Scale sizes are also available for multiple breakpoints (small, medium, large). To use the scale size classes for a specific breakpoint, simply add the breakpoint name to the class. For example, to scale a flag to 64px on medium screens, add the class <code>.medium-flag-w64</code> to the icon element.</p>
+          <p>&nbsp;</p>
+          <div class="grid-x d-icons-show">
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ac.svg" alt="#{flag}">
+                  <div><small>ac</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ad.svg" alt="#{flag}">
+                  <div><small>ad</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ae.svg" alt="#{flag}">
+                  <div><small>ae</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/af.svg" alt="#{flag}">
+                  <div><small>af</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/afar.svg" alt="#{flag}">
+                  <div><small>afar</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ag.svg" alt="#{flag}">
+                  <div><small>ag</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ai.svg" alt="#{flag}">
+                  <div><small>ai</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/al.svg" alt="#{flag}">
+                  <div><small>al</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/am.svg" alt="#{flag}">
+                  <div><small>am</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/an.svg" alt="#{flag}">
+                  <div><small>an</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ao.svg" alt="#{flag}">
+                  <div><small>ao</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/aq.svg" alt="#{flag}">
+                  <div><small>aq</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ar.svg" alt="#{flag}">
+                  <div><small>ar</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/as.svg" alt="#{flag}">
+                  <div><small>as</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/at.svg" alt="#{flag}">
+                  <div><small>at</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-aboriginal.svg" alt="#{flag}">
+                  <div><small>au-aboriginal</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-act.svg" alt="#{flag}">
+                  <div><small>au-act</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-nsw.svg" alt="#{flag}">
+                  <div><small>au-nsw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-nt.svg" alt="#{flag}">
+                  <div><small>au-nt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-qld.svg" alt="#{flag}">
+                  <div><small>au-qld</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-sa.svg" alt="#{flag}">
+                  <div><small>au-sa</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-tas.svg" alt="#{flag}">
+                  <div><small>au-tas</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-vic.svg" alt="#{flag}">
+                  <div><small>au-vic</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au-wa.svg" alt="#{flag}">
+                  <div><small>au-wa</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/au.svg" alt="#{flag}">
+                  <div><small>au</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/aw.svg" alt="#{flag}">
+                  <div><small>aw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ax.svg" alt="#{flag}">
+                  <div><small>ax</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/az.svg" alt="#{flag}">
+                  <div><small>az</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ba.svg" alt="#{flag}">
+                  <div><small>ba</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bb.svg" alt="#{flag}">
+                  <div><small>bb</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bd.svg" alt="#{flag}">
+                  <div><small>bd</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/be.svg" alt="#{flag}">
+                  <div><small>be</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bf.svg" alt="#{flag}">
+                  <div><small>bf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bg.svg" alt="#{flag}">
+                  <div><small>bg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bh.svg" alt="#{flag}">
+                  <div><small>bh</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bi.svg" alt="#{flag}">
+                  <div><small>bi</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bj.svg" alt="#{flag}">
+                  <div><small>bj</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bl.svg" alt="#{flag}">
+                  <div><small>bl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bm.svg" alt="#{flag}">
+                  <div><small>bm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bn.svg" alt="#{flag}">
+                  <div><small>bn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bo.svg" alt="#{flag}">
+                  <div><small>bo</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bq-bo.svg" alt="#{flag}">
+                  <div><small>bq-bo</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bq-sa.svg" alt="#{flag}">
+                  <div><small>bq-sa</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bq-se.svg" alt="#{flag}">
+                  <div><small>bq-se</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bq.svg" alt="#{flag}">
+                  <div><small>bq</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/br.svg" alt="#{flag}">
+                  <div><small>br</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bs.svg" alt="#{flag}">
+                  <div><small>bs</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bt.svg" alt="#{flag}">
+                  <div><small>bt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bv.svg" alt="#{flag}">
+                  <div><small>bv</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bw.svg" alt="#{flag}">
+                  <div><small>bw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/by.svg" alt="#{flag}">
+                  <div><small>by</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/bz.svg" alt="#{flag}">
+                  <div><small>bz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ca-bc.svg" alt="#{flag}">
+                  <div><small>ca-bc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ca.svg" alt="#{flag}">
+                  <div><small>ca</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cc.svg" alt="#{flag}">
+                  <div><small>cc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cd.svg" alt="#{flag}">
+                  <div><small>cd</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cf.svg" alt="#{flag}">
+                  <div><small>cf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cg.svg" alt="#{flag}">
+                  <div><small>cg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ch-gr.svg" alt="#{flag}">
+                  <div><small>ch-gr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ch.svg" alt="#{flag}">
+                  <div><small>ch</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ci.svg" alt="#{flag}">
+                  <div><small>ci</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ck.svg" alt="#{flag}">
+                  <div><small>ck</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cl.svg" alt="#{flag}">
+                  <div><small>cl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cm.svg" alt="#{flag}">
+                  <div><small>cm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cn-xj.svg" alt="#{flag}">
+                  <div><small>cn-xj</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cn.svg" alt="#{flag}">
+                  <div><small>cn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/co.svg" alt="#{flag}">
+                  <div><small>co</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cp.svg" alt="#{flag}">
+                  <div><small>cp</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cq.svg" alt="#{flag}">
+                  <div><small>cq</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cr.svg" alt="#{flag}">
+                  <div><small>cr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cu.svg" alt="#{flag}">
+                  <div><small>cu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cv.svg" alt="#{flag}">
+                  <div><small>cv</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cw.svg" alt="#{flag}">
+                  <div><small>cw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cx.svg" alt="#{flag}">
+                  <div><small>cx</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cy.svg" alt="#{flag}">
+                  <div><small>cy</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/cz.svg" alt="#{flag}">
+                  <div><small>cz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/de.svg" alt="#{flag}">
+                  <div><small>de</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/dg.svg" alt="#{flag}">
+                  <div><small>dg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/dj.svg" alt="#{flag}">
+                  <div><small>dj</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/dk.svg" alt="#{flag}">
+                  <div><small>dk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/dm.svg" alt="#{flag}">
+                  <div><small>dm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/do.svg" alt="#{flag}">
+                  <div><small>do</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/dz.svg" alt="#{flag}">
+                  <div><small>dz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ea.svg" alt="#{flag}">
+                  <div><small>ea</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/earth.svg" alt="#{flag}">
+                  <div><small>earth</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/east_african_federation.svg" alt="#{flag}">
+                  <div><small>east_african_federation</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/easter_island.svg" alt="#{flag}">
+                  <div><small>easter_island</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ec-w.svg" alt="#{flag}">
+                  <div><small>ec-w</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ec.svg" alt="#{flag}">
+                  <div><small>ec</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ee.svg" alt="#{flag}">
+                  <div><small>ee</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/eg.svg" alt="#{flag}">
+                  <div><small>eg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/eh.svg" alt="#{flag}">
+                  <div><small>eh</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/er.svg" alt="#{flag}">
+                  <div><small>er</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-ar.svg" alt="#{flag}">
+                  <div><small>es-ar</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-ce.svg" alt="#{flag}">
+                  <div><small>es-ce</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-cn.svg" alt="#{flag}">
+                  <div><small>es-cn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-ct.svg" alt="#{flag}">
+                  <div><small>es-ct</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-ga.svg" alt="#{flag}">
+                  <div><small>es-ga</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-ib.svg" alt="#{flag}">
+                  <div><small>es-ib</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-ml.svg" alt="#{flag}">
+                  <div><small>es-ml</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-pv.svg" alt="#{flag}">
+                  <div><small>es-pv</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es-variant.svg" alt="#{flag}">
+                  <div><small>es-variant</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/es.svg" alt="#{flag}">
+                  <div><small>es</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/et-or.svg" alt="#{flag}">
+                  <div><small>et-or</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/et-ti.svg" alt="#{flag}">
+                  <div><small>et-ti</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/et.svg" alt="#{flag}">
+                  <div><small>et</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/eu.svg" alt="#{flag}">
+                  <div><small>eu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/european_union.svg" alt="#{flag}">
+                  <div><small>european_union</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ewe.svg" alt="#{flag}">
+                  <div><small>ewe</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fi.svg" alt="#{flag}">
+                  <div><small>fi</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fj.svg" alt="#{flag}">
+                  <div><small>fj</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fk.svg" alt="#{flag}">
+                  <div><small>fk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fm.svg" alt="#{flag}">
+                  <div><small>fm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fo.svg" alt="#{flag}">
+                  <div><small>fo</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fr-20r.svg" alt="#{flag}">
+                  <div><small>fr-20r</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fr-bre.svg" alt="#{flag}">
+                  <div><small>fr-bre</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fr-cp.svg" alt="#{flag}">
+                  <div><small>fr-cp</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fr.svg" alt="#{flag}">
+                  <div><small>fr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/fx.svg" alt="#{flag}">
+                  <div><small>fx</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ga.svg" alt="#{flag}">
+                  <div><small>ga</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gb-con.svg" alt="#{flag}">
+                  <div><small>gb-con</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gb-eng.svg" alt="#{flag}">
+                  <div><small>gb-eng</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gb-nir.svg" alt="#{flag}">
+                  <div><small>gb-nir</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gb-ork.svg" alt="#{flag}">
+                  <div><small>gb-ork</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gb-sct.svg" alt="#{flag}">
+                  <div><small>gb-sct</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gb-wls.svg" alt="#{flag}">
+                  <div><small>gb-wls</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gb.svg" alt="#{flag}">
+                  <div><small>gb</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gd.svg" alt="#{flag}">
+                  <div><small>gd</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ge-ab.svg" alt="#{flag}">
+                  <div><small>ge-ab</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ge.svg" alt="#{flag}">
+                  <div><small>ge</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gf.svg" alt="#{flag}">
+                  <div><small>gf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gg.svg" alt="#{flag}">
+                  <div><small>gg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gh.svg" alt="#{flag}">
+                  <div><small>gh</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gi.svg" alt="#{flag}">
+                  <div><small>gi</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gl.svg" alt="#{flag}">
+                  <div><small>gl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gm.svg" alt="#{flag}">
+                  <div><small>gm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gn.svg" alt="#{flag}">
+                  <div><small>gn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gp.svg" alt="#{flag}">
+                  <div><small>gp</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gq.svg" alt="#{flag}">
+                  <div><small>gq</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gr.svg" alt="#{flag}">
+                  <div><small>gr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gs.svg" alt="#{flag}">
+                  <div><small>gs</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gt.svg" alt="#{flag}">
+                  <div><small>gt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gu.svg" alt="#{flag}">
+                  <div><small>gu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/guarani.svg" alt="#{flag}">
+                  <div><small>guarani</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gw.svg" alt="#{flag}">
+                  <div><small>gw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/gy.svg" alt="#{flag}">
+                  <div><small>gy</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/hausa.svg" alt="#{flag}">
+                  <div><small>hausa</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/hk.svg" alt="#{flag}">
+                  <div><small>hk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/hm.svg" alt="#{flag}">
+                  <div><small>hm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/hmong.svg" alt="#{flag}">
+                  <div><small>hmong</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/hn.svg" alt="#{flag}">
+                  <div><small>hn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/hr.svg" alt="#{flag}">
+                  <div><small>hr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ht.svg" alt="#{flag}">
+                  <div><small>ht</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/hu.svg" alt="#{flag}">
+                  <div><small>hu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ic.svg" alt="#{flag}">
+                  <div><small>ic</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/id-jb.svg" alt="#{flag}">
+                  <div><small>id-jb</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/id-jt.svg" alt="#{flag}">
+                  <div><small>id-jt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/id.svg" alt="#{flag}">
+                  <div><small>id</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ie.svg" alt="#{flag}">
+                  <div><small>ie</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/il.svg" alt="#{flag}">
+                  <div><small>il</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/im.svg" alt="#{flag}">
+                  <div><small>im</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/in-as.svg" alt="#{flag}">
+                  <div><small>in-as</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/in-gj.svg" alt="#{flag}">
+                  <div><small>in-gj</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/in-ka.svg" alt="#{flag}">
+                  <div><small>in-ka</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/in-or.svg" alt="#{flag}">
+                  <div><small>in-or</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/in-tg.svg" alt="#{flag}">
+                  <div><small>in-tg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/in-tn.svg" alt="#{flag}">
+                  <div><small>in-tn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/in.svg" alt="#{flag}">
+                  <div><small>in</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/io.svg" alt="#{flag}">
+                  <div><small>io</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/iq.svg" alt="#{flag}">
+                  <div><small>iq</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ir.svg" alt="#{flag}">
+                  <div><small>ir</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/is.svg" alt="#{flag}">
+                  <div><small>is</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/it-23.svg" alt="#{flag}">
+                  <div><small>it-23</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/it-82.svg" alt="#{flag}">
+                  <div><small>it-82</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/it-88.svg" alt="#{flag}">
+                  <div><small>it-88</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/it.svg" alt="#{flag}">
+                  <div><small>it</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/je.svg" alt="#{flag}">
+                  <div><small>je</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/jm.svg" alt="#{flag}">
+                  <div><small>jm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/jo.svg" alt="#{flag}">
+                  <div><small>jo</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/jp.svg" alt="#{flag}">
+                  <div><small>jp</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kanuri.svg" alt="#{flag}">
+                  <div><small>kanuri</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ke.svg" alt="#{flag}">
+                  <div><small>ke</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kg.svg" alt="#{flag}">
+                  <div><small>kg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kh.svg" alt="#{flag}">
+                  <div><small>kh</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ki.svg" alt="#{flag}">
+                  <div><small>ki</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kikuyu.svg" alt="#{flag}">
+                  <div><small>kikuyu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/km.svg" alt="#{flag}">
+                  <div><small>km</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kn.svg" alt="#{flag}">
+                  <div><small>kn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kongo.svg" alt="#{flag}">
+                  <div><small>kongo</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kp.svg" alt="#{flag}">
+                  <div><small>kp</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kr.svg" alt="#{flag}">
+                  <div><small>kr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kurdistan.svg" alt="#{flag}">
+                  <div><small>kurdistan</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kw.svg" alt="#{flag}">
+                  <div><small>kw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ky.svg" alt="#{flag}">
+                  <div><small>ky</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/kz.svg" alt="#{flag}">
+                  <div><small>kz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/la.svg" alt="#{flag}">
+                  <div><small>la</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/lb.svg" alt="#{flag}">
+                  <div><small>lb</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/lc.svg" alt="#{flag}">
+                  <div><small>lc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/li.svg" alt="#{flag}">
+                  <div><small>li</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/lk.svg" alt="#{flag}">
+                  <div><small>lk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/lr.svg" alt="#{flag}">
+                  <div><small>lr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ls.svg" alt="#{flag}">
+                  <div><small>ls</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/lt.svg" alt="#{flag}">
+                  <div><small>lt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/lu.svg" alt="#{flag}">
+                  <div><small>lu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/lv.svg" alt="#{flag}">
+                  <div><small>lv</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ly.svg" alt="#{flag}">
+                  <div><small>ly</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ma.svg" alt="#{flag}">
+                  <div><small>ma</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/malayali.svg" alt="#{flag}">
+                  <div><small>malayali</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/manipur.svg" alt="#{flag}">
+                  <div><small>manipur</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/maori.svg" alt="#{flag}">
+                  <div><small>maori</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mc.svg" alt="#{flag}">
+                  <div><small>mc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/md.svg" alt="#{flag}">
+                  <div><small>md</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/me.svg" alt="#{flag}">
+                  <div><small>me</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mf.svg" alt="#{flag}">
+                  <div><small>mf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mg.svg" alt="#{flag}">
+                  <div><small>mg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mh.svg" alt="#{flag}">
+                  <div><small>mh</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mizoram.svg" alt="#{flag}">
+                  <div><small>mizoram</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mk.svg" alt="#{flag}">
+                  <div><small>mk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ml.svg" alt="#{flag}">
+                  <div><small>ml</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mm.svg" alt="#{flag}">
+                  <div><small>mm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mn.svg" alt="#{flag}">
+                  <div><small>mn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mo.svg" alt="#{flag}">
+                  <div><small>mo</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mp.svg" alt="#{flag}">
+                  <div><small>mp</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mq.svg" alt="#{flag}">
+                  <div><small>mq</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mr.svg" alt="#{flag}">
+                  <div><small>mr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ms.svg" alt="#{flag}">
+                  <div><small>ms</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mt.svg" alt="#{flag}">
+                  <div><small>mt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mu.svg" alt="#{flag}">
+                  <div><small>mu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mv.svg" alt="#{flag}">
+                  <div><small>mv</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mw.svg" alt="#{flag}">
+                  <div><small>mw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mx.svg" alt="#{flag}">
+                  <div><small>mx</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/my.svg" alt="#{flag}">
+                  <div><small>my</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/mz.svg" alt="#{flag}">
+                  <div><small>mz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/na.svg" alt="#{flag}">
+                  <div><small>na</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nato.svg" alt="#{flag}">
+                  <div><small>nato</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nc.svg" alt="#{flag}">
+                  <div><small>nc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ne.svg" alt="#{flag}">
+                  <div><small>ne</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nf.svg" alt="#{flag}">
+                  <div><small>nf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ng.svg" alt="#{flag}">
+                  <div><small>ng</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ni.svg" alt="#{flag}">
+                  <div><small>ni</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nl-fr.svg" alt="#{flag}">
+                  <div><small>nl-fr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nl.svg" alt="#{flag}">
+                  <div><small>nl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/no.svg" alt="#{flag}">
+                  <div><small>no</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/northern_cyprus.svg" alt="#{flag}">
+                  <div><small>northern_cyprus</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/np.svg" alt="#{flag}">
+                  <div><small>np</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nr.svg" alt="#{flag}">
+                  <div><small>nr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nu.svg" alt="#{flag}">
+                  <div><small>nu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/nz.svg" alt="#{flag}">
+                  <div><small>nz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/occitania.svg" alt="#{flag}">
+                  <div><small>occitania</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/olympics.svg" alt="#{flag}">
+                  <div><small>olympics</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/om.svg" alt="#{flag}">
+                  <div><small>om</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/otomi.svg" alt="#{flag}">
+                  <div><small>otomi</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pa.svg" alt="#{flag}">
+                  <div><small>pa</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pe.svg" alt="#{flag}">
+                  <div><small>pe</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pf.svg" alt="#{flag}">
+                  <div><small>pf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pg.svg" alt="#{flag}">
+                  <div><small>pg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ph.svg" alt="#{flag}">
+                  <div><small>ph</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pk-jk.svg" alt="#{flag}">
+                  <div><small>pk-jk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pk-sd.svg" alt="#{flag}">
+                  <div><small>pk-sd</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pk.svg" alt="#{flag}">
+                  <div><small>pk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pl.svg" alt="#{flag}">
+                  <div><small>pl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pm.svg" alt="#{flag}">
+                  <div><small>pm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pn.svg" alt="#{flag}">
+                  <div><small>pn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pr.svg" alt="#{flag}">
+                  <div><small>pr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ps.svg" alt="#{flag}">
+                  <div><small>ps</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pt-20.svg" alt="#{flag}">
+                  <div><small>pt-20</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pt-30.svg" alt="#{flag}">
+                  <div><small>pt-30</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pt.svg" alt="#{flag}">
+                  <div><small>pt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/pw.svg" alt="#{flag}">
+                  <div><small>pw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/py.svg" alt="#{flag}">
+                  <div><small>py</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/qa.svg" alt="#{flag}">
+                  <div><small>qa</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/quechua.svg" alt="#{flag}">
+                  <div><small>quechua</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/re.svg" alt="#{flag}">
+                  <div><small>re</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ro.svg" alt="#{flag}">
+                  <div><small>ro</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/rs.svg" alt="#{flag}">
+                  <div><small>rs</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru-ba.svg" alt="#{flag}">
+                  <div><small>ru-ba</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru-ce.svg" alt="#{flag}">
+                  <div><small>ru-ce</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru-cu.svg" alt="#{flag}">
+                  <div><small>ru-cu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru-da.svg" alt="#{flag}">
+                  <div><small>ru-da</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru-ko.svg" alt="#{flag}">
+                  <div><small>ru-ko</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru-ta.svg" alt="#{flag}">
+                  <div><small>ru-ta</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru-ud.svg" alt="#{flag}">
+                  <div><small>ru-ud</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ru.svg" alt="#{flag}">
+                  <div><small>ru</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/rw.svg" alt="#{flag}">
+                  <div><small>rw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sa.svg" alt="#{flag}">
+                  <div><small>sa</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sami.svg" alt="#{flag}">
+                  <div><small>sami</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sb.svg" alt="#{flag}">
+                  <div><small>sb</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sc.svg" alt="#{flag}">
+                  <div><small>sc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sd.svg" alt="#{flag}">
+                  <div><small>sd</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/se.svg" alt="#{flag}">
+                  <div><small>se</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sg.svg" alt="#{flag}">
+                  <div><small>sg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sh-ac.svg" alt="#{flag}">
+                  <div><small>sh-ac</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sh-hl.svg" alt="#{flag}">
+                  <div><small>sh-hl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sh-ta.svg" alt="#{flag}">
+                  <div><small>sh-ta</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sh.svg" alt="#{flag}">
+                  <div><small>sh</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/si.svg" alt="#{flag}">
+                  <div><small>si</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sj.svg" alt="#{flag}">
+                  <div><small>sj</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sk.svg" alt="#{flag}">
+                  <div><small>sk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sl.svg" alt="#{flag}">
+                  <div><small>sl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sm.svg" alt="#{flag}">
+                  <div><small>sm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sn.svg" alt="#{flag}">
+                  <div><small>sn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/so.svg" alt="#{flag}">
+                  <div><small>so</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/somaliland.svg" alt="#{flag}">
+                  <div><small>somaliland</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/south_ossetia.svg" alt="#{flag}">
+                  <div><small>south_ossetia</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/soviet_union.svg" alt="#{flag}">
+                  <div><small>soviet_union</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sr.svg" alt="#{flag}">
+                  <div><small>sr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ss.svg" alt="#{flag}">
+                  <div><small>ss</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/st.svg" alt="#{flag}">
+                  <div><small>st</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/su.svg" alt="#{flag}">
+                  <div><small>su</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sv.svg" alt="#{flag}">
+                  <div><small>sv</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sx.svg" alt="#{flag}">
+                  <div><small>sx</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sy.svg" alt="#{flag}">
+                  <div><small>sy</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/sz.svg" alt="#{flag}">
+                  <div><small>sz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ta.svg" alt="#{flag}">
+                  <div><small>ta</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tc.svg" alt="#{flag}">
+                  <div><small>tc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/td.svg" alt="#{flag}">
+                  <div><small>td</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tf.svg" alt="#{flag}">
+                  <div><small>tf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tg.svg" alt="#{flag}">
+                  <div><small>tg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/th.svg" alt="#{flag}">
+                  <div><small>th</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tibet.svg" alt="#{flag}">
+                  <div><small>tibet</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tj.svg" alt="#{flag}">
+                  <div><small>tj</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tk.svg" alt="#{flag}">
+                  <div><small>tk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tl.svg" alt="#{flag}">
+                  <div><small>tl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tm.svg" alt="#{flag}">
+                  <div><small>tm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tn.svg" alt="#{flag}">
+                  <div><small>tn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/to.svg" alt="#{flag}">
+                  <div><small>to</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/torres_strait_islands.svg" alt="#{flag}">
+                  <div><small>torres_strait_islands</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tr.svg" alt="#{flag}">
+                  <div><small>tr</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/transnistria.svg" alt="#{flag}">
+                  <div><small>transnistria</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tt.svg" alt="#{flag}">
+                  <div><small>tt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tv.svg" alt="#{flag}">
+                  <div><small>tv</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tw.svg" alt="#{flag}">
+                  <div><small>tw</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/tz.svg" alt="#{flag}">
+                  <div><small>tz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ua.svg" alt="#{flag}">
+                  <div><small>ua</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ug.svg" alt="#{flag}">
+                  <div><small>ug</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/uk.svg" alt="#{flag}">
+                  <div><small>uk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/um.svg" alt="#{flag}">
+                  <div><small>um</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/un.svg" alt="#{flag}">
+                  <div><small>un</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/united_nations.svg" alt="#{flag}">
+                  <div><small>united_nations</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-ak.svg" alt="#{flag}">
+                  <div><small>us-ak</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-al.svg" alt="#{flag}">
+                  <div><small>us-al</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-ar.svg" alt="#{flag}">
+                  <div><small>us-ar</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-az.svg" alt="#{flag}">
+                  <div><small>us-az</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-ca.svg" alt="#{flag}">
+                  <div><small>us-ca</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-co.svg" alt="#{flag}">
+                  <div><small>us-co</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-dc.svg" alt="#{flag}">
+                  <div><small>us-dc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-fl.svg" alt="#{flag}">
+                  <div><small>us-fl</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-ga.svg" alt="#{flag}">
+                  <div><small>us-ga</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-hi.svg" alt="#{flag}">
+                  <div><small>us-hi</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-in.svg" alt="#{flag}">
+                  <div><small>us-in</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-mo.svg" alt="#{flag}">
+                  <div><small>us-mo</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-ms.svg" alt="#{flag}">
+                  <div><small>us-ms</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-nc.svg" alt="#{flag}">
+                  <div><small>us-nc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-nm.svg" alt="#{flag}">
+                  <div><small>us-nm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-ri.svg" alt="#{flag}">
+                  <div><small>us-ri</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-tn.svg" alt="#{flag}">
+                  <div><small>us-tn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us-tx.svg" alt="#{flag}">
+                  <div><small>us-tx</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/us.svg" alt="#{flag}">
+                  <div><small>us</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/uy.svg" alt="#{flag}">
+                  <div><small>uy</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/uz.svg" alt="#{flag}">
+                  <div><small>uz</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/va.svg" alt="#{flag}">
+                  <div><small>va</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/vc.svg" alt="#{flag}">
+                  <div><small>vc</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ve.svg" alt="#{flag}">
+                  <div><small>ve</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/vg.svg" alt="#{flag}">
+                  <div><small>vg</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/vi.svg" alt="#{flag}">
+                  <div><small>vi</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/vn.svg" alt="#{flag}">
+                  <div><small>vn</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/vu.svg" alt="#{flag}">
+                  <div><small>vu</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/wf.svg" alt="#{flag}">
+                  <div><small>wf</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/wiphala.svg" alt="#{flag}">
+                  <div><small>wiphala</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ws.svg" alt="#{flag}">
+                  <div><small>ws</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/xk.svg" alt="#{flag}">
+                  <div><small>xk</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/ye.svg" alt="#{flag}">
+                  <div><small>ye</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/yt.svg" alt="#{flag}">
+                  <div><small>yt</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/za.svg" alt="#{flag}">
+                  <div><small>za</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/zm.svg" alt="#{flag}">
+                  <div><small>zm</small></div>
+                </div>
+                <div class="d-icon"><img class="flag-w48" src="/assets/img/flags/zw.svg" alt="#{flag}">
+                  <div><small>zw</small></div>
+                </div>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Buttons</h2>
+          <hr>
+          <h5>Regular Sizes</h5>
+          <div class="grid-x">
+            <button class="button">Button Title</button>&nbsp; &nbsp;
+            <button class="button button--secondary">Button Title</button>&nbsp; &nbsp;
+            <button class="button button--alt">Button Title</button>
+          </div><br>
+          <h6 class="subheader">Small Sizes</h6>
+          <div class="grid-x">
+            <button class="button button--small">Button Title</button>&nbsp; &nbsp;
+            <button class="button button--secondary button--small">Button Title</button>&nbsp; &nbsp;
+            <button class="button button--alt button--small">Button Title</button>
+          </div><br>
+          <p class="subheader">Extra Small Sizes</p>
+          <div class="grid-x">
+            <button class="button button--extra-small">Button Title</button>&nbsp; &nbsp;
+            <button class="button button--secondary button--extra-small">Button Title</button>&nbsp; &nbsp;
+            <button class="button button--alt button--extra-small">Button Title</button>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Breadcrumb</h2>
+          <hr>
+          <p>Subpage breadcrumb with a main header and subheader</p>
+          <div class="breadcrumb"><a class="breadcrumb__main-header" href="/events">Events</a><a class="breadcrumb__sub-header" href="/calendar">Praise &amp; Worship</a>
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__list__item"><a href="#">Live Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Upcoming Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Past Events</a></li>
+            </ul>
+          </div>
+          <p>Subpage breadcrumb with a main header and multiple subheader</p>
+          <div class="breadcrumb"><a class="breadcrumb__main-header" href="/events">Events</a><a class="breadcrumb__sub-header" href="/calendar">Calendar</a><a class="breadcrumb__sub-header" href="/calendar">Subheader2</a>
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__list__item"><a href="#">Live Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Upcoming Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Past Events</a></li>
+            </ul>
+          </div>
+          <p>Sub landing page with medium breadcrumb</p>
+          <div class="breadcrumb breadcrumb--medium-headers"><a class="breadcrumb__main-header" href="/events">Events</a><a class="breadcrumb__sub-header" href="/calendar">Calendar</a>
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__list__item"><a href="#">Live Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Upcoming Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Past Events</a></li>
+            </ul>
+          </div>
+          <p>Landing page with large breadcrumb</p>
+          <div class="breadcrumb breadcrumb--large-headers"><a class="breadcrumb__main-header" href="/events">Events</a><a class="breadcrumb__sub-header" href="/calendar">Calendar</a>
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__list__item"><a href="#">Live Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Upcoming Events</a></li>
+              <li class="breadcrumb__list__item"><a href="#">Past Events</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Aspect Ratio</h2>
+          <hr>
+          <div class="grid-x medium-up-3 grid-margin grid-padding-x grid-padding-y">
+            <div class="cell">
+              <div class="aspect-ratio aspect-ratio--16x9">
+                <div class="aspect-ratio__content"><img class="aspect-ratio__image" src="/assets/img/placeholder-thumb.jpg"></div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="aspect-ratio aspect-ratio--16x9 medium-aspect-ratio--3x1 large-aspect-ratio--4x3">
+                <div class="aspect-ratio__content align-middle"><img class="aspect-ratio__image" src="/assets/img/placeholder-thumb.jpg"></div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="aspect-ratio aspect-ratio--16x9 medium-aspect-ratio--3x1 large-aspect-ratio--16x10"> 
+                <div class="aspect-ratio__content align-middle"><img class="aspect-ratio__image" src="/assets/img/placeholder-thumb.jpg"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Video Thumbnails</h2>
+          <hr>
+          <div class="grid-x medium-up-2 large-up-3 grid-margin-x grid-margin-y">
+            <div class="cell">
+              <div class="video-thumb aspect-ratio--2x1">
+                <div class="video-thumb__poster"><img src="/assets/img/placeholder-thumb.jpg"></div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="video-thumb video-thumb--with-overlay">
+                <div class="video-thumb__poster"><img src="/assets/img/placeholder-thumb.jpg"></div>
+                <h6 class="video-thumb__title"><a href="#">Is it OK to Leave Children with Carnal and Negative Relatives</a></h6>
+              </div>
+            </div>
+            <div class="cell"><a class="video-thumb video-thumb--featured">
+                <div class="video-thumb__poster"><img src="/assets/img/placeholder-thumb.jpg"></div>
+                <h5 class="video-thumb__title" href="#">Is it OK to Leave Children with Carnal and Negative Relatives</h5></a></div>
+          </div>
+        </section>
+        <section class="d-section">
+          <h2>Forms</h2>
+          <hr>
+          <div class="grid-x">
+            <div class="cell grid-x grid-margin-x">
+              <div class="cell medium-auto">
+                <label for="Text">Input Label</label>
+                <input id="text" type="text" name="text" placeholder="text">
+              </div>
+              <div class="cell medium-auto">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="email">
+              </div>
+              <div class="cell medium-auto">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="password">
+              </div>
+            </div>
+            <div class="cell grid-x grid-margin-x">
+              <div class="cell medium-4">
+                <label for="select">Select</label>
+                <select id="select" name="select" multiple>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <div class="cell medium-4">
+                <label for="password">Radio Button</label>
+                <input id="radio" type="radio" name="radio">
+              </div>
+              <div class="cell medium-4">
+                <label for="password">CheckBox</label>
+                <input id="radio" type="checkbox" name="checkbox">
+              </div>
+            </div>
+          </div>
+        </section>
   </body>
+  <div class="grid-container full footer">
+    <div class="footer__content">
+      <div class="grid-x">
+        <div class="cell medium-2 large-2 footer__logo"><img src="/assets/img/pastor-chris-online-logo-white.svg" alt="Pastor Chris Online"></div>
+        <div class="cell medium-8 medium-offset-1 large-6 grid-x medium-up-3 footer__links">
+          <ul class="cell">
+            <li><a href="about">About</a>
+            </li>
+            <li><a href="watch">Watch</a>
+            </li>
+            <li><a href="live">Live</a>
+            </li>
+            <li><a href="teachings">Teachings</a>
+            </li>
+            <li><a href="q&amp;a-with-pastor-chris">Q&amp;A With Pastor Chris</a>
+            </li>
+            <li><a href="testimonies">Testimonies</a>
+            </li>
+            <li><a href="loveworld-praise">LoveWorld Praise</a>
+            </li>
+            <li><a href="tv-stations-/-listings">TV Stations / Listings</a>
+            </li>
+          </ul>
+          <ul class="cell">
+            <li><a href="read">Read</a>
+            </li>
+            <li><a href="daily-devotions">Daily Devotions</a>
+            </li>
+            <li><a href="affirmations">Affirmations</a>
+            </li>
+            <li><a href="blog">Blog</a>
+            </li>
+            <li><a href="chronicles-of-prophecies">Chronicles of Prophecies</a>
+            </li>
+            <li><a href="news-&amp;-events">News &amp; Events</a>
+            </li>
+            <li><a href="foundations">Foundations</a>
+            </li>
+            <li><a href="future-africa-leaders">Future Africa Leaders</a>
+            </li>
+            <li><a href="inner-city-missions">Inner City Missions</a>
+            </li>
+            <li><a href="trauma-care-international">Trauma Care International</a>
+            </li>
+            <li><a href="volunteer-medical-corps">Volunteer Medical Corps</a>
+            </li>
+            <li><a href="bible-for-all-missions">Bible for All Missions</a>
+            </li>
+          </ul>
+          <ul class="cell">
+            <li><a href="get-involved">Get Involved</a>
+            </li>
+            <li><a href="financial-partnerships">Financial Partnerships</a>
+            </li>
+            <li><a href="become-a-prayer-partner">Become A Prayer Partner</a>
+            </li>
+            <li><a href="international-school-of-ministry">International School of Ministry</a>
+            </li>
+            <li><a href="apps">Apps</a>
+            </li>
+            <li><a href="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-x footer__copyright">
+        <div class="cell">
+          <Copyright>&copy; PastorChrisOnline 2022. All Rights Reserved</Copyright>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>

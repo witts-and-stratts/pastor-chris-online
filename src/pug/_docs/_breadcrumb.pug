@@ -1,0 +1,45 @@
++section("Breadcrumb")
+  p Subpage breadcrumb with a main header and subheader
+  .breadcrumb
+    a.breadcrumb__main-header(href="/events") Events
+    a.breadcrumb__sub-header(href="/calendar") Praise &amp; Worship
+
+    ul.breadcrumb__list
+      -
+        const links = [
+          "Live Events", "Upcoming Events", "Past Events"
+        ]
+      for link in links
+        li.breadcrumb__list__item
+          a(href="#")= link
+
+  p Subpage breadcrumb with a main header and multiple subheader
+  .breadcrumb
+    a.breadcrumb__main-header(href="/events") Events
+    a.breadcrumb__sub-header(href="/calendar") Calendar
+    a.breadcrumb__sub-header(href="/calendar") Subheader2
+
+    ul.breadcrumb__list
+      for link in links
+        li.breadcrumb__list__item
+          a(href="#")= link
+
+  p Sub landing page with medium breadcrumb
+  .breadcrumb.breadcrumb--medium-headers
+    a.breadcrumb__main-header(href="/events") Events
+    a.breadcrumb__sub-header(href="/calendar") Calendar
+
+    ul.breadcrumb__list
+      for link in links
+        li.breadcrumb__list__item
+          a(href="#")= link
+
+  p Landing page with large breadcrumb
+  .breadcrumb.breadcrumb--large-headers
+    a.breadcrumb__main-header(href="/events") Events
+    a.breadcrumb__sub-header(href="/calendar") Calendar
+
+    ul.breadcrumb__list
+      for link in links
+        li.breadcrumb__list__item
+          a(href="#")= link

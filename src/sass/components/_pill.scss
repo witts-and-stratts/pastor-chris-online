@@ -1,0 +1,46 @@
+$pill-border-radius: rem-calc(16);
+$pill-padding-vertical: rem-calc(4);
+$pill-padding-horizontal: rem-calc(16);
+$pill-background-color: $violet-light-50;
+$pill-background-color-hover: $electric-light-40;
+$pill-background-color-active: $navy;
+$pill-text-color: $anchor;
+$pill-text-color-active: $white;
+
+.pill {
+  @extend .small;
+  padding: $pill-padding-vertical $pill-padding-horizontal;
+  border-radius: $pill-border-radius;
+  background-color: $pill-background-color;
+  color: $pill-text-color;
+  border-radius: $pill-border-radius;
+  cursor: pointer;
+  transition: all 0.6s ease-out;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $pill-background-color-hover;
+  }
+
+  &:active {
+    background-color: $pill-background-color-active;
+    color: $pill-text-color-active;
+  }
+
+  [class^="icon-"] {
+    display: inline-block;
+    margin-top: 3%;
+    padding-left: rem-calc(2);
+    padding-right: rem-calc(2);
+  }
+}
+
+$pill-group-padding: rem-calc(8);
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $pill-group-padding;
+  justify-content: center;
+  max-width: 100%;
+}

@@ -17,7 +17,7 @@ import autoprefixer from "gulp-autoprefixer";
 import sourcemaps from "gulp-sourcemaps";
 import iconfont from "gulp-iconfont";
 import iconfontCSS from "gulp-iconfont-css";
-import imagemin from "gulp-imagemin";
+import imagemin, {gifsicle, mozjpeg, optipng, svgo} from "gulp-imagemin";
 import webpack from "webpack";
 import gulpWebpack from "webpack-stream";
 import * as webpackConfig from "./webpack.config.js";
@@ -181,25 +181,25 @@ function imageTask() {
     .pipe(
       imagemin(
         [
-          imagemin.gifsicle({
+          gifsicle({
             interlaced: true,
           }),
-          imagemin.mozjpeg({
+          mozjpeg({
             progressive: true,
           }),
-          imagemin.optipng({
+          optipng({
             optimizationLevel: 5,
           }),
-          imagemin.svgo({
-            plugins: [
-              {
-                removeViewBox: true,
-              },
-              {
-                cleanupIDs: false,
-              },
-            ],
-          }),
+          // svgo({
+          //   plugins: [
+          //     {
+          //       removeViewBox: true,
+          //     },
+          //     {
+          //       cleanupIDs: false,
+          //     },
+          //   ],
+          // }),
         ],
         {
           verbose: true,

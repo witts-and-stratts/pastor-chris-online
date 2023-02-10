@@ -1,17 +1,15 @@
 @font-face {
   font-family: "iconfonts";
-  src: url('/assets/fonts/iconfonts.eot');
-  src: url('/assets/fonts/iconfonts.eot?#iefix') format('eot'),
-    url('/assets/fonts/iconfonts.woff2') format('woff2'),
-    url('/assets/fonts/iconfonts.woff') format('woff'),
-    url('/assets/fonts/iconfonts.ttf') format('truetype'),
-    url('/assets/fonts/iconfonts.svg#iconfonts') format('svg');
+  src: url("/assets/fonts/iconfonts.eot");
+  src: url("/assets/fonts/iconfonts.eot?#iefix") format("eot"), url("/assets/fonts/iconfonts.woff2") format("woff2"),
+    url("/assets/fonts/iconfonts.woff") format("woff"), url("/assets/fonts/iconfonts.ttf") format("truetype"),
+    url("/assets/fonts/iconfonts.svg#iconfonts") format("svg");
 }
 
-[class^='icon-'],
-[class*=' icon-'] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -43,116 +41,126 @@
 @function icon-char($filename) {
   $char: "";
 
-   @if $filename==arrow-down {
-      $char: "\E001";
-    }
+  @if $filename==audio {
+    $char: "\E001";
+  }
 
-     @if $filename==arrow-up {
-      $char: "\E002";
-    }
+  @if $filename==bell {
+    $char: "\E002";
+  }
 
-     @if $filename==arrow {
-      $char: "\E003";
-    }
+  @if $filename==calendar {
+    $char: "\E003";
+  }
 
-     @if $filename==calendar {
-      $char: "\E004";
-    }
+  @if $filename==chevron-left {
+    $char: "\E004";
+  }
 
-     @if $filename==calendar2 {
-      $char: "\E005";
-    }
+  @if $filename==chevron-right {
+    $char: "\E005";
+  }
 
-     @if $filename==chevron-down {
-      $char: "\E006";
-    }
+  @if $filename==close {
+    $char: "\E006";
+  }
 
-     @if $filename==chevron-left {
-      $char: "\E007";
-    }
+  @if $filename==devotion {
+    $char: "\E007";
+  }
 
-     @if $filename==chevron-right {
-      $char: "\E008";
-    }
+  @if $filename==download {
+    $char: "\E008";
+  }
 
-     @if $filename==close {
-      $char: "\E009";
-    }
+  @if $filename==facebook {
+    $char: "\E009";
+  }
 
-     @if $filename==dot-icon {
-      $char: "\E00A";
-    }
+  @if $filename==filter {
+    $char: "\E00A";
+  }
 
-     @if $filename==email {
-      $char: "\E00B";
-    }
+  @if $filename==folder-closed {
+    $char: "\E00B";
+  }
 
-     @if $filename==external-link {
-      $char: "\E00C";
-    }
+  @if $filename==folder-open {
+    $char: "\E00C";
+  }
 
-     @if $filename==facebook {
-      $char: "\E00D";
-    }
+  @if $filename==healing {
+    $char: "\E00D";
+  }
 
-     @if $filename==instagram {
-      $char: "\E00E";
-    }
+  @if $filename==live {
+    $char: "\E00E";
+  }
 
-     @if $filename==left-arrow {
-      $char: "\E00F";
-    }
+  @if $filename==location {
+    $char: "\E00F";
+  }
 
-     @if $filename==mail {
-      $char: "\E010";
-    }
+  @if $filename==mail {
+    $char: "\E010";
+  }
 
-     @if $filename==minus {
-      $char: "\E011";
-    }
+  @if $filename==multimedia {
+    $char: "\E011";
+  }
 
-     @if $filename==pinterest {
-      $char: "\E012";
-    }
+  @if $filename==pinterest {
+    $char: "\E012";
+  }
 
-     @if $filename==play {
-      $char: "\E013";
-    }
+  @if $filename==play {
+    $char: "\E013";
+  }
 
-     @if $filename==plus {
-      $char: "\E014";
-    }
+  @if $filename==praises-clap {
+    $char: "\E014";
+  }
 
-     @if $filename==right-arrow {
-      $char: "\E015";
-    }
+  @if $filename==read {
+    $char: "\E015";
+  }
 
-     @if $filename==search {
-      $char: "\E016";
-    }
+  @if $filename==search {
+    $char: "\E016";
+  }
 
-     @if $filename==twitter {
-      $char: "\E017";
-    }
+  @if $filename==share {
+    $char: "\E017";
+  }
 
-     @if $filename==web {
-      $char: "\E018";
-    }
+  @if $filename==time {
+    $char: "\E018";
+  }
 
-     @if $filename==youtube {
-      $char: "\E019";
-    }
+  @if $filename==twitter {
+    $char: "\E019";
+  }
 
-    @return $char;
+  @if $filename==upload {
+    $char: "\E01A";
+  }
+
+  @if $filename==whatsapp {
+    $char: "\E01B";
+  }
+
+  @if $filename==worship {
+    $char: "\E01C";
+  }
+
+  @return $char;
 }
 
 @mixin icon($filename, $insert: before, $extend: true) {
   &:#{$insert} {
     @if $extend {
       @extend %icon;
-    }
-
-    @else {
+    } @else {
       @include icon-styles;
     }
 
@@ -160,104 +168,114 @@
   }
 }
 
-.icon-arrow-down {
-    @include icon(arrow-down);
-  }
+.icon-audio {
+  @include icon(audio);
+}
 
-  .icon-arrow-up {
-    @include icon(arrow-up);
-  }
+.icon-bell {
+  @include icon(bell);
+}
 
-  .icon-arrow {
-    @include icon(arrow);
-  }
+.icon-calendar {
+  @include icon(calendar);
+}
 
-  .icon-calendar {
-    @include icon(calendar);
-  }
+.icon-chevron-left {
+  @include icon(chevron-left);
+}
 
-  .icon-calendar2 {
-    @include icon(calendar2);
-  }
+.icon-chevron-right {
+  @include icon(chevron-right);
+}
 
-  .icon-chevron-down {
-    @include icon(chevron-down);
-  }
+.icon-close {
+  @include icon(close);
+}
 
-  .icon-chevron-left {
-    @include icon(chevron-left);
-  }
+.icon-devotion {
+  @include icon(devotion);
+}
 
-  .icon-chevron-right {
-    @include icon(chevron-right);
-  }
+.icon-download {
+  @include icon(download);
+}
 
-  .icon-close {
-    @include icon(close);
-  }
+.icon-facebook {
+  @include icon(facebook);
+}
 
-  .icon-dot-icon {
-    @include icon(dot-icon);
-  }
+.icon-filter {
+  @include icon(filter);
+}
 
-  .icon-email {
-    @include icon(email);
-  }
+.icon-folder-closed {
+  @include icon(folder-closed);
+}
 
-  .icon-external-link {
-    @include icon(external-link);
-  }
+.icon-folder-open {
+  @include icon(folder-open);
+}
 
-  .icon-facebook {
-    @include icon(facebook);
-  }
+.icon-healing {
+  @include icon(healing);
+}
 
-  .icon-instagram {
-    @include icon(instagram);
-  }
+.icon-live {
+  @include icon(live);
+}
 
-  .icon-left-arrow {
-    @include icon(left-arrow);
-  }
+.icon-location {
+  @include icon(location);
+}
 
-  .icon-mail {
-    @include icon(mail);
-  }
+.icon-mail {
+  @include icon(mail);
+}
 
-  .icon-minus {
-    @include icon(minus);
-  }
+.icon-multimedia {
+  @include icon(multimedia);
+}
 
-  .icon-pinterest {
-    @include icon(pinterest);
-  }
+.icon-pinterest {
+  @include icon(pinterest);
+}
 
-  .icon-play {
-    @include icon(play);
-  }
+.icon-play {
+  @include icon(play);
+}
 
-  .icon-plus {
-    @include icon(plus);
-  }
+.icon-praises-clap {
+  @include icon(praises-clap);
+}
 
-  .icon-right-arrow {
-    @include icon(right-arrow);
-  }
+.icon-read {
+  @include icon(read);
+}
 
-  .icon-search {
-    @include icon(search);
-  }
+.icon-search {
+  @include icon(search);
+}
 
-  .icon-twitter {
-    @include icon(twitter);
-  }
+.icon-share {
+  @include icon(share);
+}
 
-  .icon-web {
-    @include icon(web);
-  }
+.icon-time {
+  @include icon(time);
+}
 
-  .icon-youtube {
-    @include icon(youtube);
-  }
+.icon-twitter {
+  @include icon(twitter);
+}
 
-  
+.icon-upload {
+  @include icon(upload);
+}
+
+.icon-whatsapp {
+  @include icon(whatsapp);
+}
+
+.icon-worship {
+  @include icon(worship);
+}

@@ -1,0 +1,121 @@
+@use "sass:map";
+@import "../base/typography";
+
+.breadcrumb {
+  $breadcrumb-color: $anchor-light-30;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &__main-header,
+  &__sub-header {
+    @extend h6;
+    color: $navy;
+    white-space: nowrap;
+
+    @include breakpoint(large up) {
+      $h5: map.get($font-styles, large, h5);
+      @each $key, $value in $h5 {
+        #{$key}: $value;
+      }
+    }
+
+    & + .breadcrumb__sub-header {
+      padding-left: rem-calc(8);
+      &:before {
+        content: "/";
+        color: $navy;
+        padding-right: rem-calc(8);
+      }
+
+      &:last-of-type {
+        @include icon("slanted-stroke", after);
+        &:after {
+          @extend .icon-64;
+          color: $anchor-light-40;
+          padding-left: rem-calc(8);
+          padding-right: rem-calc(8);
+        }
+      }
+    }
+
+    &:hover {
+      color: $navy;
+    }
+  }
+
+  &__main-header {
+    font-weight: bold;
+  }
+
+  &__sub-header {
+    display: flex;
+    align-items: center;
+  }
+
+  &--large-headers {
+    .breadcrumb__main-header,
+    .breadcrumb__sub-header {
+      @extend h2;
+      color: $navy;
+
+      a {
+        color: $navy;
+      }
+    }
+
+    .breadcrumb__main-header {
+      font-weight: 600;
+    }
+  }
+
+  &--medium-headers {
+    .breadcrumb__main-header, .breadcrumb__sub-header {
+      @extend h3;
+      color: $navy;
+
+      a {
+        color: $navy;
+      }
+    }
+  }
+
+  &__list {
+    display: inline-block;
+    padding: 0;
+    margin: 0 !important;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &__item {
+      @extend small;
+      display: inline;
+      color: $breadcrumb-color;
+      user-select: none;
+      padding-right: rem-calc(8);
+      position: relative;
+
+      @include breakpoint(large up) {
+        $p: map.get($font-styles, large, p);
+        @each $key, $value in $p {
+          #{$key}: $value;
+        }
+      }
+
+      &:not(:last-of-type) {
+        &:after {
+          content: "/";
+          padding-left: rem-calc(8);
+        }
+      }
+
+      a {
+        color: $breadcrumb-color;
+
+        &:hover {
+          color: $anchor-light-20;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
++section("Instructions")
+  .grid-x
+    h6.cell.padding-bottom-2 This project is a frontend implementation of the new Pastor Chris Online website. It is built with the following technologies:
+    p &nbsp;
+    .cell.d-2-columns
+      h6 1. Foundation Framework
+      p Foundation is a responsive frontend framework. It contains CSS and HTML based design templates for typography, forms, buttons, tables, grids, navigation, and other interface components, as well as optional JavaScript extensions. Foundation is available via npm:
+
+      h6 2. Gulp
+      p Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something. Gulp is available via npm. <a href="https://gulpjs.com/" title="Gulp">Learn more about Gulp</a>.
+
+      h6 3. Pug
+      p Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers. Pug is available via npm: <a href="https://pugjs.org/" title="Pug JS">Learn more about Pug.</a>
+
+      h6 4. Typescript
+      p Typescript is a typed superset of JavaScript that compiles to plain JavaScript. It is available via npm: <a href="https://www.typescriptlang.org/" title="Typescript">Learn more about Typescript.</a>
+
+      h6 5. SASS
+      p SASS is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets. It is available via npm: <a href="https://sass-lang.com/" title="SASS">Learn more about SASS.</a>
+
+      h6 6. Webpack
+      p Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset. It is available via npm: <a href="https://webpack.js.org/" title="Webpack">Learn more about Webpack.</a>
+
++section("Folder structure", "h3")
+  .cell.grid-x
+    .cell.medium-6
+      .d-tree
+        ul
+          li 
+            i.d-folder-open 
+            | dist
+            ul 
+              li
+                i.d-folder-open 
+                | assets 
+                ul
+                  li
+                    i.d-folder-closed
+                    | css
+                  li
+                    i.d-folder-closed
+                    | fonts
+                  li
+                    i.d-folder-closed
+                    | img
+                  li
+                    i.d-folder-closed
+                    | js
+              li index.html
+          li 
+            i.d-folder-open 
+            | src
+            ul 
+              li
+                i.d-folder-closed
+                | fonts
+              li
+                i.d-folder-closed
+                | iconfonts
+              li
+                i.d-folder-closed
+                | img
+              li
+                i.d-folder-closed
+                | js
+              li
+                i.d-folder-closed
+                | pug
+              li
+                i.d-folder-closed
+                | sass
+                ul
+                  li
+                    i.d-folder-closed
+                    | base
+                  li
+                    i.d-folder-closed
+                    | components
+                  li
+                    i.d-folder-closed
+                    | mixins
+                  li
+                    i.d-folder-closed
+                    | page
+                  li
+                    i.d-folder-closed
+                    | sections
+                  li
+                    i.d-file
+                    | _color-creator.scss
+                  li
+                    i.d-file
+                    | _settings.scss
+                  li
+                    i.d-file
+                    | fonts.scss
+                  li
+                    i.d-file
+                    | style.scss
+              li
+                i.d-folder-closed
+                | ts
+              li
+                i.d-file
+                | icon-font-template.scss
+            li
+              i.d-file
+              | .gitignore
+            li
+              i.d-file
+              | gulpfile.js
+            li
+              i.d-file
+              | makefile
+            li
+              i.d-file
+              | package.json
+            li
+              i.d-file
+              | README.md
+            li
+              i.d-file
+              | tsconfig.json
+            li
+              i.d-file
+              | typings.json
+            li
+              i.d-file
+              | webpack.config.js
+            li
+              i.d-file
+              | yarn.lock
+    .cell.medium-6
+      p <strong> 1. src </strong>
+        br
+        | This folder contains all the source files for the project. It contains the following sub-folders: 
+        strong fonts, iconfonts, img, js, pug, sass, ts
+      p <strong>2. fonts </strong>
+        br
+        | This folder holds the fonts <em>'Graphik'</em> and all other associated fonts required for the website.
+      p <strong>3. iconfonts </strong>
+        br
+        | This folder contains svg files which are automatically converted to iconfonts using the <code>icon-font-template.scss</code>file, during the build process. To add an svg icon to the set, simply add the svg file to this folder.
+      p <strong>4. img </strong>
+        br
+        | This folder contains all the images used in the project.
+      p <strong>5. pug </strong>
+        br
+        | This folder contains all the pug files used in the project. The <code>index.pug</code> file is the entry point for the project
+      p <strong>6. ts </strong>
+        br
+        | This folder contains all the typescript files used in the project. The <code>main.ts</code> file is the entry point for the typescript files. The typescript files are compiled to javascript files in the <code>dist/assets/js</code> folder.
+
+      p <strong>7. sass </strong>
+        br
+        | This folder contains all the sass files used in the project. The <code>main.scss</code> file is the entry point for the stylesheets. The sass files not starting with "_" are compiled to css files in the <code>dist/assets/css</code> folder.
+      p 
+        code _settings.scss
+        | contains the Foundation Framework settings. Please check the table of content for an idea of what is configurable.
+      p The 
+        code base
+        | folder contains extensions that implements the typography, colors, and other base styles.
+      
+      p The 
+        code mixins
+        | folder contains special helper functions that can be used in the sass files. The <code>sections</code> contains styles for specific sections of the website, like the header, footer, etc.
+      
+      p The 
+        code components
+        | folder contains styles for specific components of the website, like buttons, forms, etc. This is where most of the atomic styles reside.
+
++section("Starting the project", "h3")
+  .cell.padding-top-2 
+    p Clone this repository and run the following commands in the root directory of the project: 
+      code npm install
+      span or 
+      code yarn install
+      span then run 
+      code npm start
+      span or 
+      code yarn start
+      | this will install the required node modules and start the build process. Subsequently, just run <code>npm start</code> or <code>yarn start</code> to begin the build process.
+    
+    p: em Quick note: all styles in the "_docs" folder, both in the sass and pug files, are not compiled to the final css and html files. They are only used for the documentation. Remember to remove or disable them before building your final frontend project.

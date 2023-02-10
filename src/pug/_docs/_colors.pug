@@ -1,0 +1,129 @@
++section("Colors")
+  p Colors are divided into <strong>Primary, Tints</strong> and <strong>Shades</strong>. All colors are available as sass variables in the <code>/src/sass/base/color.scss</code>file. The primary colors are: <code>$blue</code>, <code>$navy</code>, <code>$anchor</code>, <code>$purple</code>, <code>$black</code>, <code>$violet</code>, <code>$electric</code> and <code>$white</code>.
+
+  p Colors can also be accessed using special helper classes in HTML: For example, <code class="c-blue">.c-blue</code> to change the colour to blue and <code class="bg-blue c-white">.bg-blue</code> to change the background to blue.
+  -
+    const documentColors = {
+      "Primary Colors": [
+        {blue: "#0018f9"},
+        {navy: "#000080"},
+        {anchor: "#3e424b"},
+        {purple: "#800080"},
+        {black: "#000000"},
+        {violet: "#b200ed"},
+        {electric: "#8f00ff"},
+        {white: "#ffffff"},
+      ],
+      "Lights": {
+        blue: [
+          {"blue-light-10": "#2d41ff"},
+          {"blue-light-20": "#606fff"},
+          {"blue-light-30": "#939dff"},
+          {"blue-light-40": "#c6cbff"},
+          {"blue-light-50": "#f9faff"},
+        ],
+        navy: [
+          {"navy-light-10": "#0000b3"},
+          {"navy-light-20": "#0000e6"},
+          {"navy-light-30": "#1a1aff"},
+          {"navy-light-40": "#4d4dff"},
+          {"navy-light-50": "#8080ff"},
+          {"navy-light-60": "#b3b3ff"},
+          {"navy-light-70": "#e6e6ff"},
+        ],
+        anchor: [
+          {"anchor-light-10": "#555b67"},
+          {"anchor-light-20": "#6c7383"},
+          {"anchor-light-30": "#878d9b"},
+          {"anchor-light-40": "#a1a7b3"},
+          {"anchor-light-50": "##bec2ca"},
+          {"anchor-light-60": "#dadce1"},
+          {"anchor-light-70": "#f6f7f8"},
+        ],
+        purple: [
+          {"purple-light-10": "#b300b3"},
+          {"purple-light-20": "#e600e6"},
+          {"purple-light-30": "#ff1aff"},
+          {"purple-light-40": "#ff4dff"},
+          {"purple-light-50": "#ff80ff"},
+          {"purple-light-60": "#ffb3ff"},
+          {"purple-light-70": "#ffe6ff"},
+        ],
+        violet: [
+          {"violet-light-10": "#c821ff"},
+          {"violet-light-20": "#d454ff"},
+          {"violet-light-30": "#e187ff"},
+          {"violet-light-40": "#eebaff"},
+          {"violet-light-50": "#fbedff"},
+        ],
+        electric: [
+          {"electric-light-10": "#a533ff"},
+          {"electric-light-20": "#bc66ff"},
+          {"electric-light-30": "#d299ff"},
+          {"electric-light-40": "#e9ccff"},
+        ],
+      },
+      "Darks": {
+      blue: [
+        {"blue-dark-10": "#0013c6"},
+        {"blue-dark-20": "#000e93"},
+        {"blue-dark-30": "#000960"},
+        {"blue-dark-40": "#00042d"},
+      ],
+      navy: [
+        {"navy-dark-10": "#00004d"},
+        {"navy-dark-20": "#00001a"},
+      ],
+      anchor: [
+        {"anchor-dark-10": "#27292f"},
+        {"anchor-dark-20": "#101113"},
+      ],
+      purple: [
+        {"purple-dark-10": "#4d004d"},
+        {"purple-dark-20": "#1a001a"},
+      ],
+      violet: [
+        {"violet-dark-10": "#8c00ba"},
+        {"violet-dark-20": "#650087"},
+        {"violet-dark-30": "#3f0054"},
+        {"violet-dark-40": "190021"},
+      ],
+      electric: [
+        {"electric-dark-10": "#7200cc"},
+        {"electric-dark-20": "#560099"},
+        {"electric-dark-30": "390066"},
+        {"electric-dark-40": "1d0033"},
+      ],
+      }
+    }
+
+  .grid-container.full
+    .grid-x
+      .cell.grid-x.d-color-group
+        h6.cell 
+          | Primary Colors
+          hr.d-hr
+        .cell.grid-x.small-up-3.medium-up-4.large-up-8.grid-margin-x.grid-margin-y
+          each colorSet in documentColors["Primary Colors"]
+            each hexCode,color  in colorSet
+              .cell.d-color-box
+                .d-color-box__color(class="bg-"+color)
+                p.d-color-box__name #{color}
+                small.d-color-box__code.c-anchor-light-30 #{hexCode}
+    .grid-x
+      each colors, name in documentColors
+        if name != "Primary Colors"
+          .cell.grid-x.d-color-group
+            h6.cell
+              | #{name}
+              hr.d-hr
+            each tintGroup, name in colors
+              .cell.grid-x.d-color-group
+                h6.cell #{name[0].toUpperCase() + name.slice(1)}
+                .cell.grid-x.small-up-3.medium-up-4.large-up-8.grid-margin-x.grid-margin-y
+                  each colorSet in tintGroup
+                    each hexCode,color in colorSet
+                      .cell.d-color-box
+                        .d-color-box__color(class="bg-"+color)
+                        p.d-color-box__name #{color}
+                        small.d-color-box__code.c-anchor-light-30 #{hexCode}

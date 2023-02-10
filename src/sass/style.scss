@@ -2,6 +2,7 @@
 @import "settings";
 @import "foundation";
 @import "components/iconfonts";
+@import "base/colors";
 
 // Grids
 @include foundation-xy-grid-classes;
@@ -10,18 +11,25 @@
 // Global
 @include foundation-global-styles;
 @include foundation-typography;
-// @include foundation-forms;
+@include foundation-forms;
 
 
 
 // Generic Components
-@include foundation-button;
+// @include foundation-button;
+@import "components/icons.scss";
+@import "components/flags.scss";
 @import "components/button";
+@import "components/pill";
+@import "components/breadcrumb";
+@import "components/video";
+@import "components/aspect-ratio";
+@import "components/form";
 
 // Helpers
 @include foundation-visibility-classes;
-@include foundation-flex-classes;
-@include foundation-prototype-classes;
+// @include foundation-flex-classes;
+// @include foundation-prototype-classes;
 
 @import "base/typography";
 @import "base/layout";
@@ -32,9 +40,18 @@
 @import "sections/header";
 @import "sections/footer";
 
+// Documentation styles...Remember to delete or disable when you're done
+// This is just to make the documentation look nice
+@import "_docs/docs";
+
 html,
 body {
   scroll-behavior: smooth;
   width: 100%;
   -webkit-font-smoothing: subpixel-antialiased;
+  overflow-x: hidden;
+}
+
+.documentation-section {
+  padding-bottom: rem-calc(64);
 }

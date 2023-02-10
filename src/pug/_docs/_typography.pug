@@ -1,0 +1,35 @@
+-
+  const headers = [
+    "zero", "one", "two", "three", "four", "five", "six"
+  ]
+  const elements = [
+    "p", "small"
+  ]
+  const largeClasses = [
+    "xxlarge", "xlarge", "large"
+  ]
+  const smallClasses = [
+    "extra-small", "xx-small"
+  ]
++section("Typography")
+  p The typography is based on the Graphik font family. Styles are provide for the standard HTML header tags: <strong>H1 ,H2, H3, H4, H5, H6</strong>, and the <strong>p</strong> and <strong>small</strong> tags. Large styles <strong>xxlarge, xlarge and large </strong>above the <strong>H1</strong> tag Styles are also provided for <strong>small, extra-small and xx-small</strong>. As well as being able to use the standard HTML tags, you can also use the <strong>.xxlarge, .xlarge, .large .h1, .h2, .h3, .h4, .h5, .h6</strong> classes.
+
+  p The types change responsively based on the screen size. To configure the properties of the typography elements, please check the <code>/src/sass/base/_typography.scss</code> file. You can also check <code>/src/sass/_settings.scss</code> file to see other configurable items.
+  for largeClass in largeClasses
+    small.c-anchor-light-30 #{largeClass}
+    p(class=largeClass) The quick brown fox jumped over the lazy dog
+    hr.d-hr
+  for header, idx in headers
+    if idx != 0
+      - const h = `h${idx}`
+      small.c-anchor-light-30 Header #{header}
+      #{h} The quick brown fox jumped over the lazy dog
+      hr.d-hr
+  for element in elements
+    small.c-anchor-light-30 #{element}
+    #{element} The quick brown fox jumped over the lazy dog
+    hr.d-hr
+  for smallClass in smallClasses
+    small.c-anchor-light-30 #{smallClass}
+    p(class=smallClass) The quick brown fox jumped over the lazy dog
+    hr.d-hr

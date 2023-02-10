@@ -1,123 +1,84 @@
 .footer {
-  // @include xy-grid-container(full);
-  @extend %padded-container;
+  background-color: $navy;
+  color: $white;
+  padding: rem-calc(16);
   padding-top: rem-calc(64);
-  padding-bottom: rem-calc(64);
-  border-top: rem-calc(1) solid lighten($gray-3, 15%);
-  letter-spacing: rem-calc(-0.2);
+  padding-bottom: rem-calc(32);
+  background-image: url("/assets/img/flourish-background.png");
+  background-repeat: no-repeat;
+  background-position: 180% 100%;
 
-  &__wrapper,
-  .copyright {
-    @include xy-grid;
+  @include breakpoint(medium up) {
+    background-position: 110% 100%;
   }
 
-  .logo,
-  .nav,
-  .social-links {
-    @include xy-cell();
-    font-weight: 100;
+  @include breakpoint(large up) {
+    background-position: 110% 0%;
+    background-size: 30%;
+  }
 
-    a {
-      color: $gray-2;
+  &__links {
+    padding-bottom: rem-calc(64);
+
+    ul {
+      padding-right: rem-calc(16);
     }
   }
 
-  .logo {
-    margin-bottom: rem-calc(48);
-
-    @include breakpoint(medium up) {
-      @include xy-cell(3);
-    }
-  }
-
-  .nav {
-    @include breakpoint(medium up) {
-      @include xy-cell(3);
-      @include xy-cell-offset(1);
-    }
-  }
-
-  .social-links {
-    @include breakpoint(medium up) {
-      @include xy-cell(5);
-      text-align: right;
-    }
-
-
-    li {
-      @include breakpoint(medium up) {
-        display: inline-block;
-        padding-left: $global-padding;
-      }
-    }
-  }
-
-  .copyright {
-    border-top: rem-calc(1) solid lighten($gray-3, 15%);
-    padding-top: rem-calc(16);
-    margin-top: rem-calc(16);
-    font-size: 80%;
-    color: $gray-3;
-  }
-}
-
-.footer2 {
-  @extend %padded-container;
-  text-align: center;
-  margin-top: rem-calc(60);
-  margin-bottom: rem-calc(60);
-
-  &__wrapper {
-    @include xy-grid;
-  }
-
-  .logo {
-    @include xy-cell();
+  &__logo {
+    display: block;
     margin-bottom: rem-calc(24);
+  }
 
-    img {
-      max-width: rem-calc(100);
+  &__content {
+    width: 100%;
+    padding-left: rem-calc(16);
+    padding-right: rem-calc(16);
 
-      @include breakpoint(medium up) {
-        max-width: rem-calc(170);
-      }
+    @include breakpoint(medium up) {
+      padding-left: rem-calc(48);
+      padding-right: rem-calc(48);
     }
   }
 
-  .social-links {
-    @include xy-cell();
-    font-weight: 100;
+  a {
+    @extend .small;
+    color: $white;
+    display: block;
+    padding-top: rem-calc(4);
+    padding-bottom: rem-calc(4);
+  }
 
-    li {
-      display: inline-block;
-      text-transform: uppercase;
-      letter-spacing: rem-calc(2);
-      font-size: 80%;
+  ul {
+    margin: 0;
+  }
 
-      @include breakpoint(medium up) {
-        font-size: 90%;
-      letter-spacing: rem-calc(3);
-      }
+  li {
+    list-style-type: none;
+    margin-left: 0;
+    display: block;
+  }
+
+  &__newsletter-signup {
+    &__header {
+      margin-bottom: 0;
+      color: $electric-light-30
     }
 
-    a {
-      color: $gray-2;
-      padding-left: rem-calc(4);
-      padding-right: rem-calc(4);
-
-      @include breakpoint(medium up) {
-        padding-left: rem-calc(8);
-      padding-right: rem-calc(8);
-      }
+    @include breakpoint(large up) {
+      padding-left: rem-calc(64);
     }
   }
 
-  .copyright {
-    @include xy-cell();
-    border-top: rem-calc(1) solid lighten($gray-3, 15%);
-    padding-top: rem-calc(16);
-    color: $gray-3;
-    font-size: 80%;
-    font-weight: 100;
+  &__copyright {
+    @extend .extra-small;
+    margin-bottom: rem-calc(16);
+    border-top: rem-calc(0.5) solid rgba($white, 0.4);
+    padding-top: rem-calc(24);
+    margin-top: rem-calc(64);
+
+    @include breakpoint(large up) {
+      margin-top: rem-calc(128);
+    }
   }
 }

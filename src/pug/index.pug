@@ -2,8 +2,26 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="/assets/css/style.css")
     title Pastor Chris Online
-  body 
-    h1 Pastor Chris Online
+  body
+    include /_mixins/_section
+    include /_mixins/_icon
+    include /_mixins/_flag
+
+    include /_docs/_instructions
+    include /_docs/_typography
+    include /_docs/_colors
+    include /_docs/_pill
+    include /_docs/_pill-group
+    include /_docs/_icons
+    include /_docs/_flags
+    include /_docs/_buttons
+    include /_docs/_breadcrumb
+    include /_docs/_aspect-ratio
+    include /_docs/_videos-thumbnails
+    include /_docs/_form
+    
+  include /_sections/_footer

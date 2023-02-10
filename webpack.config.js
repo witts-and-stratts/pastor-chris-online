@@ -1,7 +1,7 @@
 export const config = {
   mode: "production",
   entry: {
-    app: "/src/ts/app.ts",
+    main: "/src/ts/main.ts",
   },
   devtool: "inline-source-map",
   watch: true,

@@ -76,20 +76,16 @@ $foundation-palette: (
   warning: $black,
   alert: $black,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #000000;
-$white: #fefefe;
+
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: "Poppins", Helvetica, Arial, sans-serif;
+$body-font-family: "Graphik", Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
-$global-weight-bold: bold;
+$global-weight-bold: 500;
 $global-radius: 0;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
@@ -139,133 +135,26 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: "Poppins", Helvetica, Arial, sans;
+$header-font-family: "Graphik", Helvetica, Arial, sans;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
-$header-styles: (
-  small: (
-    "h1": (
-      "font-size": rem-calc(40),
-      "line-height": 1,
-      "font-weight": 500,
-      "margin-bottom": rem-calc(8),
-    ),
-    "h2": (
-      "font-size": rem-calc(33),
-      "line-height": rem-calc(1),
-      "font-weight": rem-calc(500)
-    ),
-    "h3": (
-      "font-size": rem-calc(28),
-      "line-height": 1,
-      "font-weight": 500
-    ),
-    "h4": (
-      "font-size": rem-calc(23),
-      "font-weight": 500,
-      "line-height": 1.2,
-    ),
-    "h5": (
-      "font-size": rem-calc(19),
-      "font-weight": 500,
-      "line-height": 1.2,
-      "margin-bottom": rem-calc(8),
-    ),
-    "h6": (
-      "font-size": rem-calc(16),
-      "font-weight": 500,
-    ),
-    "p": (
-      "font-size": rem-calc(16),
-      "line-height": rem-calc(24),
-      "letter-spacing": rem-calc(-0.1),
-      "color": $gray-1,
-      "font-weight": 200
-    ),
-    "small": (
-      "font-size": rem-calc(12),
-      "line-height": rem-calc(16)
-    )
-  ),
-  medium: (
-    "h1": (
-      "font-size": rem-calc(43),
-      "margin-bottom": rem-calc(16),
-    ),
-    "h2": (
-      "font-size": rem-calc(34),
-    ),
-    "h3": (
-      "font-size": rem-calc(28),
-    ),
-    "h4": (
-      "font-size": rem-calc(22),
-    ),
-    "h5": (
-      "font-size": rem-calc(18),
-    ),
-    "h6": (
-      "font-size": rem-calc(16),
-    ),
-  ),
-  large: (
-    "h1": (
-      "font-size": rem-calc(62),
-      "line-height": 1,
-      "letter-spacing": rem-calc(-2),
-    ),
-    "h2": (
-      "font-size": rem-calc(50),
-      "line-height": 1,
-      "letter-spacing": rem-calc(-1.04)
-    ),
-    "h3": (
-      "font-size": rem-calc(40),
-      "line-height": 1,
-      "letter-spacing": rem-calc(-0.83)
-    ),
-    "h4": (
-      "font-size": rem-calc(32),
-      "line-height": 1.125,
-      "letter-spacing": rem-calc(-0.67)
-    ),
-    "h5": (
-      "font-size": rem-calc(25),
-      "line-height": 1.2,
-      "letter-spacing": rem-calc(-0.52)
-    ),
-    "h6": (
-      "font-size": rem-calc(20),
-      "line-height": 1.2,
-      "letter-spacing": rem-calc(-0.2)
-    ),
-    "p": (
-      "font-size": rem-calc(18),
-      "line-height": rem-calc(24),
-      "letter-spacing": rem-calc(-0.1),
-      "color": $gray-1,
-      "font-weight": 200,
-      "margin-bottom": rem-calc(24),
-    )
-  ),
-);
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 90%;
-$header-small-font-color: $medium-gray;
+$header-small-font-color: $anchor-light-20;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
-$anchor-color: $primary-color;
-$anchor-color-hover: lighten($black, 20%);
+$anchor-color: $navy;
+$anchor-color-hover: $blue;
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
-$hr-width: $global-width;
-$hr-border: 1px solid $medium-gray;
+$hr-width: 100%;
+$hr-border: 1px solid $anchor;
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -276,13 +165,13 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
+$blockquote-color: $anchor;
 $blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
+$blockquote-border: 1px solid $anchor-light-20;
 $enable-cite-block: true;
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
-$keystroke-background: $light-gray;
+$keystroke-background: $anchor-light-40;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
@@ -293,20 +182,20 @@ $abbr-underline: 1px dotted $black;
 $lead-font-size: $global-font-size * 1.25;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
-$subheader-color: $dark-gray;
+$subheader-color: $anchor;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;
 $stat-font-size: 2.5rem;
-$cite-color: $dark-gray;
+$cite-color: $anchor;
 $cite-font-size: rem-calc(13);
 $cite-pseudo-content: "\2014 \0020";
-$code-color: $black;
+$code-color: $anchor;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
-$code-background: $light-gray;
-$code-border: 1px solid $medium-gray;
-$code-padding: rem-calc(2 5 1);
+$code-background: lighten($anchor-light-60, 5%);
+$code-border: 1px solid $anchor-light-60;
+$code-padding: rem-calc(2 8);
 $code-block-padding: 1rem;
 $code-block-margin-bottom: 1.5rem;
 
@@ -330,10 +219,10 @@ $accordion-plus-content: "\002B";
 $accordion-minus-content: "\2013";
 $accordion-title-font-size: rem-calc(12);
 $accordion-item-color: $primary-color;
-$accordion-item-background-hover: $light-gray;
+$accordion-item-background-hover: $anchor-light-40;
 $accordion-item-padding: 1.25rem 1rem;
 $accordion-content-background: $white;
-$accordion-content-border: 1px solid $light-gray;
+$accordion-content-border: 1px solid $anchor-light-40;
 $accordion-content-color: $body-font-color;
 $accordion-content-padding: 1rem;
 
@@ -371,13 +260,13 @@ $breadcrumbs-margin: 0 0 $global-margin 0;
 $breadcrumbs-item-font-size: rem-calc(11);
 $breadcrumbs-item-color: $primary-color;
 $breadcrumbs-item-color-current: $black;
-$breadcrumbs-item-color-disabled: $medium-gray;
+$breadcrumbs-item-color-disabled: $anchor-light-20;
 $breadcrumbs-item-margin: 0.75rem;
 $breadcrumbs-item-uppercase: true;
 $breadcrumbs-item-separator: true;
 $breadcrumbs-item-separator-item: "/";
 $breadcrumbs-item-separator-item-rtl: "\\";
-$breadcrumbs-item-separator-color: $medium-gray;
+$breadcrumbs-item-separator-color: $anchor-light-20;
 
 // 11. Button
 // ----------
@@ -392,7 +281,7 @@ $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
 $button-radius: $global-radius;
-$button-border: rem-calc(1) solid $gray-3;
+$button-border: rem-calc(1) solid $anchor-light-20;
 $button-hollow-border-width: rem-calc(0);
 $button-sizes: (
   tiny: 0.6rem,
@@ -438,8 +327,8 @@ $callout-link-tint: 30%;
 
 $card-background: $white;
 $card-font-color: $body-font-color;
-$card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-divider-background: $anchor-light-40;
+$card-border: 1px solid $anchor-light-40;
 $card-shadow: none;
 $card-border-radius: $global-radius;
 $card-padding: $global-padding;
@@ -464,7 +353,7 @@ $closebutton-size: (
   medium: 2em,
 );
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
+$closebutton-color: $anchor;
 $closebutton-color-hover: $black;
 
 // 16. Drilldown
@@ -485,7 +374,7 @@ $drilldown-arrow-size: 6px;
 
 $dropdown-padding: 1rem;
 $dropdown-background: $body-background;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-border: 1px solid $anchor-light-20;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
@@ -508,7 +397,7 @@ $dropdownmenu-submenu-background: $white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: 1px solid $anchor-light-20;
 $dropdown-menu-item-color-active: get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
@@ -521,7 +410,7 @@ $flexbox-responsive-breakpoints: true;
 // 20. Forms
 // ---------
 
-$fieldset-border: 1px solid $medium-gray;
+$fieldset-border: 1px solid $anchor-light-20;
 $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
 $legend-padding: rem-calc(0 3);
@@ -530,30 +419,30 @@ $helptext-color: $black;
 $helptext-font-size: rem-calc(13);
 $helptext-font-style: italic;
 $input-prefix-color: $black;
-$input-prefix-background: $light-gray;
-$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-background: $anchor-light-40;
+$input-prefix-border: 1px solid $anchor-light-20;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
-$form-label-font-size: rem-calc(14);
+$form-label-color: $anchor;
+$form-label-font-size: rem-calc(13);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
 $select-background: $white;
-$select-triangle-color: $dark-gray;
+$select-triangle-color: $anchor;
 $select-radius: $global-radius;
 $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $anchor-light-20;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-font-weight: $global-weight-normal;
 $input-line-height: $global-lineheight;
 $input-background: $white;
 $input-background-focus: $white;
-$input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
+$input-background-disabled: $anchor-light-40;
+$input-border: rem-calc(1) solid $anchor-light-20;
+$input-border-focus: rem-calc(1) solid $electric;
 $input-padding: math.div($form-spacing, 2);
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow: inset 0 rem-calc(1) rem-calc(2) rgba($electric, 0.1);
+$input-shadow-focus: 0 0 rem-calc(10) rgba($electric, 0.2);
 $input-cursor-disabled: not-allowed;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;

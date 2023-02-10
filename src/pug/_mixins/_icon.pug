@@ -1,0 +1,8 @@
+mixin icon(icon, size=16)
+  -
+    const ic = `icon-${icon} icon-${size}`
+  div.cell.text-center.align-self-bottom
+    span(class=ic)
+    div
+      small #{icon}
+  

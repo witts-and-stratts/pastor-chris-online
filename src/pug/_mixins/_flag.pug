@@ -1,0 +1,8 @@
+mixin flag(flag, size=16)
+  -
+    const fl = `flag-w${size}`
+  div.d-icon
+    img(class=fl src="/assets/img/flags/"+flag+".svg" alt="#{flag}")
+    div
+      small #{flag}
+  

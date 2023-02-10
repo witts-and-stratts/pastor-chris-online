@@ -1,23 +1,140 @@
+$blue: #0018f9;
+$blue-light-10: #2d41ff;
+$blue-light-20: #606fff;
+$blue-light-30: #939dff;
+$blue-light-40: #c6cbff;
+$blue-light-50: #f9faff;
+$blue-dark-10: #0013c6;
+$blue-dark-20: #000e93;
+$blue-dark-30: #000960;
+$blue-dark-40: #00042d;
+
+$navy: #000080;
+$navy-light-10: #0000b3;
+$navy-light-20: #0000e6;
+$navy-light-30: #1a1aff;
+$navy-light-40: #4d4dff;
+$navy-light-50: #8080ff;
+$navy-light-60: #b3b3ff;
+$navy-light-70: #e6e6ff;
+$navy-dark-10: #00004d;
+$navy-dark-20: #00001a;
+
+$anchor: #3e424b;
+$anchor-light-10: #555b67;
+$anchor-light-20: #6c7383;
+$anchor-light-30: #878d9b;
+$anchor-light-40: #a2a7b3;
+$anchor-light-50: #bec2ca;
+$anchor-light-60: #dadce1;
+$anchor-light-70: #f6f7f8;
+$anchor-dark-10: #27292f;
+$anchor-dark-20: #101113;
+
+$purple: #800080;
+$purple-light-10: #b300b3;
+$purple-light-20: #e600e6;
+$purple-light-30: #ff1aff;
+$purple-light-40: #ff4dff;
+$purple-light-50: #ff80ff;
+$purple-light-60: #ffb3ff;
+$purple-light-70: #ffe6ff;
+$purple-dark-10: #4d004d;
+$purple-dark-20: #1a001a;
+
 $black: #000000;
+
+$violet: #b200ed;
+$violet-light-10: #c821ff;
+$violet-light-20: #d454ff;
+$violet-light-30: #e187ff;
+$violet-light-40: #eebaff;
+$violet-light-50: #fbedff;
+$violet-dark-10: #8c00ba;
+$violet-dark-20: #650087;
+$violet-dark-30: #3f0054;
+$violet-dark-40: #190021;
+
+$electric: #8f00ff;
+$electric-light-10: #a533ff;
+$electric-light-20: #bc66ff;
+$electric-light-30: #d299ff;
+$electric-light-40: #e9ccff;
+$electric-dark-10: #7200cc;
+$electric-dark-20: #560099;
+$electric-dark-30: #390066;
+$electric-dark-40: #1d0033;
+
 $white: #ffffff;
-$gray-1: #2c2c2c;
-$gray-2: #939191;
-$gray-3: #cccccc;
 
+// Color map. Just a repetition of the colours but in a map
 $colors: (
-  "black": $black,
-  "white": $white,
-  "gray-1": $gray-1,
-  "gray-2": $gray-2,
-  "gray-3": $gray-3,
+  blue: #0018f9,
+  blue-light-10: #2d41ff,
+  blue-light-20: #606fff,
+  blue-light-30: #939dff,
+  blue-light-40: #c6cbff,
+  blue-light-50: #f9faff,
+  blue-dark-10: #0013c6,
+  blue-dark-20: #000e93,
+  blue-dark-30: #000960,
+  blue-dark-40: #00042d,
+
+  navy: #000080,
+  navy-light-10: #0000b3,
+  navy-light-20: #0000e6,
+  navy-light-30: #1a1aff,
+  navy-light-40: #4d4dff,
+  navy-light-50: #8080ff,
+  navy-light-60: #b3b3ff,
+  navy-light-70: #e6e6ff,
+  navy-dark-10: #00004d,
+  navy-dark-20: #00001a,
+
+  anchor: #3e424b,
+  anchor-light-10: #555b67,
+  anchor-light-20: #6c7383,
+  anchor-light-30: #878d9b,
+  anchor-light-40: #a2a7b3,
+  anchor-light-50: #bec2ca,
+  anchor-light-60: #dadce1,
+  anchor-light-70: #f6f7f8,
+  anchor-dark-10: #27292f,
+  anchor-dark-20: #101113,
+
+  purple: #800080,
+  purple-light-10: #b300b3,
+  purple-light-20: #e600e6,
+  purple-light-30: #ff1aff,
+  purple-light-40: #ff4dff,
+  purple-light-50: #ff80ff,
+  purple-light-60: #ffb3ff,
+  purple-light-70: #ffe6ff,
+  purple-dark-10: #4d004d,
+  purple-dark-20: #1a001a,
+
+  black: #000000,
+
+  violet: #b200ed,
+  violet-light-10: #c821ff,
+  violet-light-20: #d454ff,
+  violet-light-30: #e187ff,
+  violet-light-40: #eebaff,
+  violet-light-50: #fbedff,
+  violet-dark-10: #8c00ba,
+  violet-dark-20: #650087,
+  violet-dark-30: #3f0054,
+  violet-dark-40: #190021,
+
+  electric: #8f00ff,
+  electric-light-10: #a533ff,
+  electric-light-20: #bc66ff,
+  electric-light-30: #d299ff,
+  electric-light-40: #e9ccff,
+  electric-dark-10: #7200cc,
+  electric-dark-20: #560099,
+  electric-dark-30: #390066,
+  electric-dark-40: #1d0033,
+
+  white: #ffffff,
 );
-
-@each $color, $value in $colors {
-  .bg-#{$color} {
-    background-color: $value;
-  }
-
-  .c-#{$color} {
-    color: $value;
-  }
-}

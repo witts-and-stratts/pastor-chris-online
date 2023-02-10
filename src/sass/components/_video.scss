@@ -1,0 +1,167 @@
+@use "sass:math";
+@use "../mixins/aspect-ratio" as *;
+
+$mobile-play-icon-size: 64;
+$tablet-play-icon-size: 80;
+$desktop-play-icon-size: 100;
+
+.video-thumb {
+  @include aspect-ratio(5, 4); //Default aspect ratio of 5:4
+  @include icon(play, before);
+  display: inline-block;
+  cursor: pointer;
+  // background-color: $anchor-light-50;
+  border-radius: rem-calc(8);
+  position: relative;
+  overflow: hidden;
+
+  &__poster {
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      object-position: center center;
+      top: 0;
+      left: 0;
+      border-radius: rem-calc(8);
+      transition: transform 0.6s ease-out;
+    }
+  }
+
+  &:before {
+    @extend %icon-#{$mobile-play-icon-size};
+    @extend %medium-icon-#{$tablet-play-icon-size};
+    @extend %large-icon-#{$desktop-play-icon-size};
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: $white;
+    z-index: 50;
+    transform-origin: center center;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover {
+    &:before {
+      transform: scale(1.2) translateX(-40%) translateY(-40%);
+    }
+
+    img,
+    picture {
+      transform: scale(1.2);
+    }
+  }
+  &--featured {
+    @extend .video-thumb;
+    padding-bottom: unset;
+
+    &:before {
+      content: unset;
+    }
+    .video-thumb__poster {
+      @include icon(play, before);
+      @include aspect-ratio(5, 4);
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-left: rem-calc(16);
+        z-index: 100;
+        font-size: rem-calc(48);
+        color: $white;
+        transition: transform 1s ease-out;
+
+        @include breakpoint(medium up) {
+          font-size: rem-calc(48);
+        }
+
+        @include breakpoint(large up) {
+          font-size: rem-calc(64);
+        }
+      }
+
+      &:hover {
+        img,
+        picture {
+          transform: scale(1.2);
+        }
+        &:before {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .video-thumb__title {
+      position: relative;
+      margin-top: rem-calc(16);
+      color: $navy;
+    }
+  }
+
+  &--with-overlay {
+    &:before {
+      font-size: rem-calc(48);
+      bottom: 0;
+      right: rem-calc(16);
+      left: unset;
+      top: unset;
+      transform: unset;
+
+      @include breakpoint(medium up) {
+        font-size: rem-calc(48);
+      }
+
+      @include breakpoint(large up) {
+        font-size: rem-calc(64);
+      }
+    }
+    &:hover {
+      &:before {
+        transform: scale(1.2);
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba($navy-dark-10, 0) 40%, rgba($navy-dark-10, 0.7) 100%);
+      mix-blend-mode: multiply;
+      z-index: 5;
+    }
+
+    .video-thumb__title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-left: rem-calc(16);
+      color: $white;
+      z-index: 20;
+      padding-left: rem-calc(16);
+      padding-bottom: rem-calc(16);
+      max-width: 80%;
+      margin-bottom: 0;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}

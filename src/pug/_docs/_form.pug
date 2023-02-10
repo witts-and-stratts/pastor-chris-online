@@ -1,0 +1,25 @@
++section("Forms")
+  .grid-x
+    .cell.grid-x.grid-margin-x
+      .cell.medium-auto
+        label(for="Text") Input Label
+        input#text(type="text", name="text", placeholder="text")
+      .cell.medium-auto
+        label(for="email") Email
+        input#email(type="email", name="email", placeholder="email")
+      .cell.medium-auto
+        label(for="password") Password
+        input#password(type="password", name="password", placeholder="password")
+    .cell.grid-x.grid-margin-x
+      .cell.medium-4
+        label(for="select") Select
+        select#select(name="select" multiple)
+          option(value="1") Option 1
+          option(value="2") Option 2
+          option(value="3") Option 3
+      .cell.medium-4
+        label(for="password") Radio Button
+        input#radio(type="radio", name="radio") 
+      .cell.medium-4
+        label(for="password") CheckBox
+        input#radio(type="checkbox", name="checkbox") 

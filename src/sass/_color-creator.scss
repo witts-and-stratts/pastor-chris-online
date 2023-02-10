@@ -1,0 +1,49 @@
+@use "sass:map";
+// Sass functions
+@function capitalize($string) {
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+$colors: (
+  blue: #0018f9,
+  navy: #000080,
+  anchor: #3e424b,
+  purple: #800080,
+  black: #000000,
+  violet: #b200ed,
+  electric: #8f00ff,
+  white: #ffffff,
+);
+
+// Include white color
+.white {
+  color: map-get($map: $colors, $key: white);
+}
+
+$content: ();
+@function create-colors($colors) {
+  $colorsMap: ();
+  @each $color, $val in $colors {
+    $colorsMap: map.set($colorsMap, $color, $val);
+    // Lights
+    @for $perc from 1 through 7 {
+      $colorsMap: map.set($colorsMap, "#{$color}-light-#{$perc * 10}", lighten($val, $perc * 10%));
+    }
+
+    // Darks
+    @for $perc from 1 through 5 {
+      $colorsMap: map.set($colorsMap, "#{$color}-dark-#{$perc * 10}", darken($val, $perc * 10%));
+    }
+  }
+  @return $colorsMap;
+}
+
+.colors {
+  @each $color, $val in create-colors($colors) {
+    @debug $color;
+    @debug $val;
+    #{"$" + $color}: $val;
+  }
+}
+
+// @debug create-colors($colors);

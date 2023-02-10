@@ -1,0 +1,40 @@
+@function toInt($value) {
+  @return $value * 1;
+}
+
+// Icon sizes are set in multiples of 4, till we get to 256
+$multiple: 4;
+@for $size from 1 through 64 {
+  $size: $size * $multiple;
+  %icon-#{$size} {
+    font-size: rem-calc(toInt($size));
+  }
+
+  %medium-icon-#{$size} {
+    @include breakpoint(medium) {
+      font-size: rem-calc(toInt($size));
+    }
+  }
+
+  %large-icon-#{$size} {
+    @include breakpoint(large) {
+      font-size: rem-calc(toInt($size));
+    }
+  }
+
+  .icon-#{$size} {
+    font-size: rem-calc(toInt($size));
+  }
+
+  .medium-icon-#{$size} {
+    @include breakpoint(medium) {
+      font-size: rem-calc(toInt($size));
+    }
+  }
+
+  .large-icon-#{$size} {
+    @include breakpoint(large) {
+      font-size: rem-calc(toInt($size));
+    }
+  }
+}

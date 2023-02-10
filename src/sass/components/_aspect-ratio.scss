@@ -1,0 +1,40 @@
+@use "sass:math";
+@use "../mixins/aspect-ratio" as *;
+
+$aspect_ratios: ((1, 1), (2, 1), (3, 1), (3, 2), (4, 3), (5, 3), (5, 4), (16, 9), (16, 10));
+
+.aspect-ratio {
+  background-color: $anchor-light-50;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &__content {
+    position: absolute;
+    top: 0;
+  left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@each $ratio in $aspect_ratios {
+  $width: nth($ratio, 1);
+  $height: nth($ratio, 2);
+
+  .aspect-ratio--#{$width}x#{$height} {
+    @include aspect-ratio($width, $height);
+  }
+
+  .medium-aspect-ratio--#{$width}x#{$height} {
+    @include breakpoint(medium) {
+      @include aspect-ratio($width, $height)
+    }
+  }
+
+  .large-aspect-ratio--#{$width}x#{$height} {
+    @include breakpoint(large) {
+      @include aspect-ratio($width, $height);
+    }
+  }
+}

@@ -1,0 +1,18 @@
++section("Icons")
+  p Icons are svg files which are converted to <em>iconfonts</em> during the build process. The icons were designed on a 128x128 grid for proper scale adjustments and to enable consistent in all icons. For stroke-heavy icons, the stroke width at the 128 scale should be 4px. 
+  
+  p To add an icon to the set, simply add the svg file to the <code>/src/iconfonts</code> folder.
+
+  p To use an icon, simply add the class <code>.icon-{icon-name}</code> to the icon element. For example, to use the <code>audio</code> icon, add the class <code>.icon-audio</code> to the icon element. See <code>/src/sass/components/_iconfonts.scss</code> for the full list of icon classes.
+
++section("Icon Sizes", "h5")
+  p We have special scale size classes for icons. These classes are used to scale the icons to the appropriate size. The scale sizes increases by a factor of "4" from 4 till 256. To scale an icon, simply add the class <code>.icon-{size}</code> to the icon element. For example, to scale an icon to 64px, add the class <code>.icon-64</code> to the icon element. See <code>/src/sass/components/_icons.scss</code> for the full list of scale size classes.
+
+  p Scale sizes are also available for multiple breakpoints (small, medium, large). To use the scale size classes for a specific breakpoint, simply add the breakpoint name to the class. For example, to scale an icon to 64px on medium screens, add the class <code>.medium-icon-64</code> to the icon element.</span>
+  - 
+    const icons = [
+      "audio", "bell", "calendar", "chevron-left", "chevron-right", "close", "devotion", "download", "filter", "healing", "live", "location", "mail", "multimedia", "praises-clap", "worship", "read", "search", "time", "upload", "whatsapp", "share", "play","twitter", "facebook", "pinterest",
+    ]
+  .grid-x.small-up-3.medium-up-5.large-up-8.grid-margin-x.grid-margin-y
+    for icon in icons
+      +icon(icon, 64)

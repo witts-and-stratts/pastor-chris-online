@@ -1,0 +1,11 @@
+@use "./color";
+
+// We loop through the color map and create a text-color and background color class for each
+@each $key, $val in color.$colors {
+  .c-#{"" + $key} {
+    color: #{$val};
+  }
+  .bg-#{"" + $key} {
+    background-color: #{$val};
+  }
+}
