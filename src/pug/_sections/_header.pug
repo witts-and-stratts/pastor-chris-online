@@ -1,0 +1,27 @@
+header.header
+  nav.nav.nav--left
+    ul
+      li.nav__item
+        a.nav__link(href="/about" title="about") About
+      li.nav__item
+        a.nav__link(href="/watch" title="watch") Watch
+      li.nav__item
+        a.nav__link(href="/read" title="read") Read
+      li.nav__item
+        a.nav__link(href="/chronicles-of-prophecy" title="Chronicles of Prophecy") Chronicles of Prophecy
+  img.logo(src="/assets/img/pastor-chris-online-logo.svg" alt="Pastor Chris Online Logo")
+  nav.nav.nav--right
+    ul 
+      li.nav__item
+        a.nav__link(href="/ask-pastor-chris" title="Ask Pastor Chris") Ask Pastor Chris
+      li.nav__item
+        a.nav__link(href="/get-involved" title="Get Involved") Get Involved
+    .search-btn.js-global-search-control
+    .hamburger-btn
+      #hamburger-menu.js-global-nav-btn
+        span
+        span
+        span
+
+  include /_sections/_header/_global-search
+  include /_sections/_header/_menu-dropdown

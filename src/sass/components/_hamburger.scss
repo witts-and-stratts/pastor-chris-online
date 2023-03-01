@@ -1,0 +1,70 @@
+// Hamburger Menu
+@use "sass:math";
+
+$hamburger-color: $anchor;
+$hamburger-width: rem-calc(32);
+$hamburger-height: rem-calc(16);
+$hamburger-padding: rem-calc(16);
+$hamburger-thickness: rem-calc(1);
+$hamburger-color-hover: $navy;
+$hamburger-half-size: math.div($hamburger-height, 2);
+
+.hamburger-btn {
+  overflow: hidden;
+  max-width: 100%;
+  cursor: pointer;
+  padding: $hamburger-padding;
+  margin-top: rem-calc(-10);
+
+  &:hover {
+    span {
+      background-color: $hamburger-color-hover;
+    }
+  }
+
+  #hamburger-menu {
+    position: relative;
+    width: $hamburger-width;
+    height: $hamburger-height;
+
+    span {
+      opacity: 1;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: $hamburger-thickness;
+      border-radius: rem-calc(10);
+      background-color: $hamburger-color;
+      position: absolute;
+      transform: rotate(0deg);
+      transition: .4s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: $hamburger-half-size;
+      }
+
+      &:nth-child(3) {
+        top: $hamburger-height;
+      }
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: translateY($hamburger-half-size) rotate(135deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(rem-calc(-60));
+      }
+
+      span:nth-child(3) {
+        transform: translateY($hamburger-half-size * -1) rotate(-135deg);
+      }
+    }
+  }
+}

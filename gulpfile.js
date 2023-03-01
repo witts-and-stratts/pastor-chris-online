@@ -11,8 +11,8 @@ import notify from "gulp-notify";
 import bs from "browser-sync";
 const browserSync = bs.create();
 import gulpSass from "gulp-sass";
-import sass2 from "sass";
-const sass = gulpSass(sass2);
+import dartSass from "sass";
+const sass = gulpSass(dartSass);
 import autoprefixer from "gulp-autoprefixer";
 import sourcemaps from "gulp-sourcemaps";
 import iconfont from "gulp-iconfont";
@@ -152,7 +152,7 @@ function sassTask() {
       })
     )
     .pipe(
-      sass({
+      sass.sync({
         outputStyle: settings.sass.outputStyle,
         includePaths: settings.sass.includePaths,
       })

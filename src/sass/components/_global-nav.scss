@@ -1,0 +1,89 @@
+
+.global-nav-dropdown {
+  left: 0;
+  display: flex;
+  padding-left: 0;
+  flex-direction: column;
+
+  @include breakpoint(medium up) {
+    flex-direction: row;
+    gap: rem-calc(48);
+  }
+
+  @at-root &__wrapper {
+    width: 100vw;
+    margin-left: calc((100vw - 100%) * -0.5);
+    position: absolute;
+    top: calc(100% - 20px);
+    padding: rem-calc(24) rem-calc(16) rem-calc(48) rem-calc(16);
+    filter: drop-shadow(rem-calc(0) rem-calc(100) rem-calc(100) rgba($navy, 0.3));
+    // height: 90vh;
+    z-index: 80;
+    background-color: $electric;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    @include breakpoint(medium up) {
+      padding-top: rem-calc(48);
+    }
+  }
+
+  &__column {
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: flex-start;
+    margin-bottom: 0;
+
+    li {
+      display: block;
+      list-style-type: none;
+    }
+    a {
+      @extend .h5;
+      display: block;
+      text-align: left;
+      color: $white;
+      transition: transform 0.3s ease-out, color 0.3s ease-out;
+
+      &:hover {
+        color: $electric-light-30;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__close-btn {
+    @include icon(close, after);
+    @extend .icon-32;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $white;
+
+    &:after {
+      padding: rem-calc(8);
+      transition: transform 0.3s ease-out, border 0.3s ease-out;
+      display: inline-block;
+    }
+
+    &:hover {
+      &::after {
+        transform: scale(1.3);
+        color: $electric-light-30;
+      }
+    }
+  }
+
+  &__featured {
+    background-color: rgba($white, 0.05);
+    color: $white;
+    padding: rem-calc(16);
+    filter: drop-shadow(0 rem-calc(30) rem-calc(30) rgba($navy, 0.3));
+
+    a, [class$="title"] {
+      color: $white !important;
+    }
+  }
+}

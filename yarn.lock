@@ -345,6 +345,18 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
+"@orchidjs/sifter@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@orchidjs/sifter/-/sifter-1.0.3.tgz#43f42519472282eb632d0a1589184f044d64129b"
+  integrity sha512-zCZbwKegHytfsPm8Amcfh7v/4vHqTAaOu6xFswBYcn8nznBOuseu6COB2ON7ez0tFV0mKL0nRNnCiZZA+lU9/g==
+  dependencies:
+    "@orchidjs/unicode-variants" "^1.0.4"
+
+"@orchidjs/unicode-variants@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@orchidjs/unicode-variants/-/unicode-variants-1.0.4.tgz#6d2f812e3b19545bba2d81caffff1204de9a6a58"
+  integrity sha512-NvVBRnZNE+dugiXERFsET1JlKZfM5lJDEpSMilKW4bToYJ7pxf0Zne78xyXB2ny2c2aHfJ6WLnz1AaTNHAmQeQ==
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -420,7 +432,7 @@
   dependencies:
     gsap "*"
 
-"@types/gulp-newer@1.4.0":
+"@types/gulp-newer@0.0.32":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/gulp-newer/-/gulp-newer-0.0.32.tgz#d2128f36e3ac4842cd0df7628f1bb0b44dceed14"
   integrity sha512-H9KRWsNr4Z/HfUU82yuDT9Vshps8BsUWjOBqUImIsk9iBU2a19d/FIl6yUqCx1juSwzmKx8jbZ45S7zP49aWQw==
@@ -747,11 +759,6 @@ ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
   integrity sha512-TIGnTpdo+E3+pCyAluZvtED5p5wCqLdezCyhPZzKPcxvFplEt4i+W7OONCKgeZFT3+y5NZZfOOS/Bdcanm1MYA==
-
-ansi-regex@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.1.tgz#123d6479e92ad45ad897d4054e3c7ca7db4944e1"
-  integrity sha512-+O9Jct8wf++lXxxFc4hc8LsjaSq0HFzzL7cVsw8pRDIPdjKD2mT4ytDZlLuSBZ4cLKZFXIrMGO7DbQCtMJJMKw==
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -1526,7 +1533,7 @@ chalk@^1.0.0, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^2.0.0, chalk@^2.3.0:
+chalk@^2.0.0:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -3673,7 +3680,7 @@ growly@^1.3.0:
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha512-+xGQY0YyAWCnqy7Cd++hc2JqMYzlm0dG30Jd0beaA64sROr8C4nt8Yc9V5Ro3avlSUDTN0ulqP/VBKi1/lLygw==
 
-gsap@*, gsap@^3.7.1:
+gsap@*, gsap@^3.11.4:
   version "3.11.4"
   resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.11.4.tgz#e6d972d3509a7431b86d81d6fc3bbeb6862e5ff1"
   integrity sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==
@@ -3713,20 +3720,6 @@ gulp-cli@^2.2.0:
     semver-greatest-satisfied-range "^1.1.0"
     v8flags "^3.2.0"
     yargs "^7.1.0"
-
-gulp-dart-sass@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gulp-dart-sass/-/gulp-dart-sass-1.0.2.tgz#20e33c236b48d557c91e8dfe67a2aef2b8a2e328"
-  integrity sha512-8fLttA824mbuc0jRVlGs00zWYZXBckat6INawx5kp66Eqsz5srNWTA51t0mbfB4C8a/a/GZ9muYLwXGklgAHlw==
-  dependencies:
-    chalk "^2.3.0"
-    lodash.clonedeep "^4.3.2"
-    plugin-error "^1.0.1"
-    replace-ext "^1.0.0"
-    sass "^1.26.3"
-    strip-ansi "^4.0.0"
-    through2 "^2.0.0"
-    vinyl-sourcemaps-apply "^0.2.0"
 
 gulp-iconfont-css@^3.0.0:
   version "3.0.0"
@@ -4236,9 +4229,9 @@ immutable@^3:
   integrity sha512-15gZoQ38eYjEjxkorfbcgBKBL6R7T459OuK+CpcWt7O3KF4uPCx2tD0uFETlUDIyo+1789crbMhTvQBSR5yBMg==
 
 immutable@^4.0.0:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.2.2.tgz#2da9ff4384a4330c36d4d1bc88e90f9e0b0ccd16"
-  integrity sha512-fTMKDwtbvO5tldky9QZ2fMX7slR0mYpY5nbnFWYp0fOzDhHqhgIw9KoYgxLWsoNTS9ZHGauHj18DTyEw6BK3Og==
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.2.4.tgz#83260d50889526b4b531a5e293709a77f7c55a2a"
+  integrity sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==
 
 import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.3.0"
@@ -5119,7 +5112,7 @@ lodash.clone@^4.3.2:
   resolved "https://registry.yarnpkg.com/lodash.clone/-/lodash.clone-4.5.0.tgz#195870450f5a13192478df4bc3d23d2dea1907b6"
   integrity sha512-GhrVeweiTD6uTmmn5hV/lzgCQhccwReIVRLHp7LT4SopOjqEZ5BbX8b5WWEtAKasjmy8hR7ZPwsYlxRCku5odg==
 
-lodash.clonedeep@^4.3.2, lodash.clonedeep@^4.5.0:
+lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   integrity sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==
@@ -6900,10 +6893,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.26.3:
-  version "1.57.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.57.1.tgz#dfafd46eb3ab94817145e8825208ecf7281119b5"
-  integrity sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==
+sass@^1.58.3:
+  version "1.58.3"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.58.3.tgz#2348cc052061ba4f00243a208b09c40e031f270d"
+  integrity sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -7491,13 +7484,6 @@ strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   dependencies:
     ansi-regex "^2.0.0"
 
-strip-ansi@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-4.0.0.tgz#a8479022eb1ac368a871389b635262c505ee368f"
-  integrity sha512-4XaJ2zQdCzROZDivEVIDPkcQn8LMFSa8kj8Gxb/Lnwzv9A8VctNZ+lfivC/sV3ivW8ElJTERXZoPBRrZKkNKow==
-  dependencies:
-    ansi-regex "^3.0.0"
-
 strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
@@ -7872,6 +7858,14 @@ token-types@^4.1.1:
     "@tokenizer/token" "^0.3.0"
     ieee754 "^1.2.1"
 
+tom-select@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/tom-select/-/tom-select-2.2.2.tgz#8e5f9296e6d80254feccb57f0986bd6c44d126e2"
+  integrity sha512-igGah1yY6yhrnN2h/Ky8I5muw/nE/YQxIsEZoYu5qaA4bsRibvKto3s8QZZosKpOd0uO8fNYhRfAwgHB4IAYew==
+  dependencies:
+    "@orchidjs/sifter" "^1.0.3"
+    "@orchidjs/unicode-variants" "^1.0.4"
+
 trim-repeated@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/trim-repeated/-/trim-repeated-1.0.0.tgz#e3646a2ea4e891312bf7eace6cfb05380bc01c21"
@@ -8210,7 +8204,7 @@ vinyl-sourcemap@^1.1.0:
     remove-bom-buffer "^3.0.0"
     vinyl "^2.0.0"
 
-vinyl-sourcemaps-apply@^0.2.0, vinyl-sourcemaps-apply@^0.2.1:
+vinyl-sourcemaps-apply@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/vinyl-sourcemaps-apply/-/vinyl-sourcemaps-apply-0.2.1.tgz#ab6549d61d172c2b1b87be5c508d239c8ef87705"
   integrity sha512-+oDh3KYZBoZC8hfocrbrxbLUeaYtQK7J5WU5Br9VqWqmCll3tFJqKp97GC9GmMsVIL0qnx2DgEDVxdo5EZ5sSw==

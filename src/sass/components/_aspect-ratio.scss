@@ -12,7 +12,7 @@ $aspect_ratios: ((1, 1), (2, 1), (3, 1), (3, 2), (4, 3), (5, 3), (5, 4), (16, 9)
   &__content {
     position: absolute;
     top: 0;
-  left: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -28,7 +28,7 @@ $aspect_ratios: ((1, 1), (2, 1), (3, 1), (3, 2), (4, 3), (5, 3), (5, 4), (16, 9)
 
   .medium-aspect-ratio--#{$width}x#{$height} {
     @include breakpoint(medium) {
-      @include aspect-ratio($width, $height)
+      @include aspect-ratio($width, $height);
     }
   }
 

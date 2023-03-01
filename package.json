@@ -32,7 +32,6 @@
     "foundation-sites": "^6.7.5",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
-    "gulp-dart-sass": "^1.0.2",
     "gulp-iconfont": "^11.0.1",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-imagemin": "^8.0.0",
@@ -40,10 +39,13 @@
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-pug-3": "^1.2.2",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-util": "^3.0.8",
     "jquery": "3.6.3",
+    "sass": "^1.58.3",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.4",
     "webpack": "^5.75.0",
@@ -62,8 +64,7 @@
   "license": "ISC",
   "dependencies": {
     "@splidejs/splide": "^2.4.21",
-    "gsap": "^3.7.1",
-    "gulp-run": "^1.7.1",
-    "gulp-typescript": "^6.0.0-alpha.1"
+    "gsap": "^3.11.4",
+    "tom-select": "^2.2.2"
   }
 }

@@ -23,7 +23,7 @@ $pill-text-color-active: $white;
     background-color: $pill-background-color-hover;
   }
 
-  &:active {
+  &:active, &.active {
     background-color: $pill-background-color-active;
     color: $pill-text-color-active;
   }

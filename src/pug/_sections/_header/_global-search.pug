@@ -1,0 +1,29 @@
+.global-search__wrapper.js-global-search
+  .global-search
+    form.global-search__form.js-global-search-form(action="/search" method="get")
+      input.global-search__input.js-global-search-input(type="search" placeholder="Search Pastor Chris Online" name="query" autocomplete="off")
+      .pill.pill.global-search__advanced-btn.js-global-search-advanced-control Advanced Search
+      button.global-search__search-btn
+    .global-search__advanced-search__wrapper.js-global-search-advanced
+      .global-search__advanced-search
+        .global-search__advanced-search__content 
+          label(for="content-type")  Content Type
+          .global-search__advanced-search__content__input
+            select#content-type(name="content-type" multiple placeholder="Select content type" data-plugins="remove_button,input_autogrow")
+              option(value="video") Video
+              option(value="article") Article
+              option(value="podcast") Podcast
+              option(value="book") Book
+        .global-search__advanced-search__content 
+          label(for="category") Category
+          .global-search__advanced-search__content__input
+            select#category(name="category" multiple data-plugins="remove_button,input_autogrow" placeholder="Select content category") 
+              option(value="items") Items
+              option(value="events") Events
+              option(value="sermons") Sermons
+              option(value="articles") Articles
+              option(value="podcasts") Podcasts
+
+    .global-search__results.js-global-search-results
+      .global-search__results__header
+        small Global Search Results

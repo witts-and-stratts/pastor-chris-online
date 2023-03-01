@@ -18,7 +18,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-worship:before, .icon-whatsapp:before, .icon-upload:before, .icon-twitter:before, .icon-time:before, .icon-share:before, .icon-search:before, .icon-read:before, .icon-praises-clap:before, .icon-play:before, .icon-pinterest:before, .icon-multimedia:before, .icon-mail:before, .icon-location:before, .icon-live:before, .icon-healing:before, .icon-folder-open:before, .icon-folder-closed:before, .icon-filter:before, .icon-facebook:before, .icon-download:before, .icon-devotion:before, .icon-close:before, .icon-chevron-right:before, .icon-chevron-left:before, .icon-calendar:before, .icon-bell:before, .icon-audio:before {
+.icon-worship:before, .icon-whatsapp:before, .icon-upload:before, .icon-twitter:before, .icon-time:before, .icon-share:before, .icon-search:before, .icon-read:before, .icon-praises-clap:before, .icon-play:before, .icon-pinterest:before, .icon-multimedia:before, .icon-mail:before, .icon-location:before, .icon-live:before, .icon-healing:before, .icon-folder-open:before, .icon-folder-closed:before, .icon-filter:before, .icon-facebook:before, .icon-download:before, .icon-devotion:before, .icon-close:before, .icon-chevron-up:before, .icon-chevron-right:before, .icon-chevron-left:before, .icon-chevron-down:before, .icon-calendar:before, .icon-bell:before, .icon-audio:before {
   font-family: "iconfonts";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,103 +41,111 @@
   content: "\e003";
 }
 
-.icon-chevron-left:before {
+.icon-chevron-down:before {
   content: "\e004";
 }
 
-.icon-chevron-right:before {
+.icon-chevron-left:before {
   content: "\e005";
 }
 
-.icon-close:before {
+.icon-chevron-right:before {
   content: "\e006";
 }
 
-.icon-devotion:before {
+.icon-chevron-up:before {
   content: "\e007";
 }
 
-.icon-download:before {
+.icon-close:before {
   content: "\e008";
 }
 
-.icon-facebook:before {
+.icon-devotion:before {
   content: "\e009";
 }
 
-.icon-filter:before {
+.icon-download:before {
   content: "\e00a";
 }
 
-.icon-folder-closed:before {
+.icon-facebook:before {
   content: "\e00b";
 }
 
-.icon-folder-open:before {
+.icon-filter:before {
   content: "\e00c";
 }
 
-.icon-healing:before {
+.icon-folder-closed:before {
   content: "\e00d";
 }
 
-.icon-live:before {
+.icon-folder-open:before {
   content: "\e00e";
 }
 
-.icon-location:before {
+.icon-healing:before {
   content: "\e00f";
 }
 
-.icon-mail:before {
+.icon-live:before {
   content: "\e010";
 }
 
-.icon-multimedia:before {
+.icon-location:before {
   content: "\e011";
 }
 
-.icon-pinterest:before {
+.icon-mail:before {
   content: "\e012";
 }
 
-.icon-play:before {
+.icon-multimedia:before {
   content: "\e013";
 }
 
-.icon-praises-clap:before {
+.icon-pinterest:before {
   content: "\e014";
 }
 
-.icon-read:before {
+.icon-play:before {
   content: "\e015";
 }
 
-.icon-search:before {
+.icon-praises-clap:before {
   content: "\e016";
 }
 
-.icon-share:before {
+.icon-read:before {
   content: "\e017";
 }
 
-.icon-time:before {
+.icon-search:before {
   content: "\e018";
 }
 
-.icon-twitter:before {
+.icon-share:before {
   content: "\e019";
 }
 
-.icon-upload:before {
+.icon-time:before {
   content: "\e01a";
 }
 
-.icon-whatsapp:before {
+.icon-twitter:before {
   content: "\e01b";
 }
 
-.icon-worship:before {
+.icon-upload:before {
   content: "\e01c";
+}
+
+.icon-whatsapp:before {
+  content: "\e01d";
+}
+
+.icon-worship:before {
+  content: "\e01e";
 }
 /*# sourceMappingURL=../sass-maps/components/iconfonts.css.map */

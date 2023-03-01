@@ -55,104 +55,112 @@
       $char: "\E003";
     }
 
-     @if $filename==chevron-left {
+     @if $filename==chevron-down {
       $char: "\E004";
     }
 
-     @if $filename==chevron-right {
+     @if $filename==chevron-left {
       $char: "\E005";
     }
 
-     @if $filename==close {
+     @if $filename==chevron-right {
       $char: "\E006";
     }
 
-     @if $filename==devotion {
+     @if $filename==chevron-up {
       $char: "\E007";
     }
 
-     @if $filename==download {
+     @if $filename==close {
       $char: "\E008";
     }
 
-     @if $filename==facebook {
+     @if $filename==devotion {
       $char: "\E009";
     }
 
-     @if $filename==filter {
+     @if $filename==download {
       $char: "\E00A";
     }
 
-     @if $filename==folder-closed {
+     @if $filename==facebook {
       $char: "\E00B";
     }
 
-     @if $filename==folder-open {
+     @if $filename==filter {
       $char: "\E00C";
     }
 
-     @if $filename==healing {
+     @if $filename==folder-closed {
       $char: "\E00D";
     }
 
-     @if $filename==live {
+     @if $filename==folder-open {
       $char: "\E00E";
     }
 
-     @if $filename==location {
+     @if $filename==healing {
       $char: "\E00F";
     }
 
-     @if $filename==mail {
+     @if $filename==live {
       $char: "\E010";
     }
 
-     @if $filename==multimedia {
+     @if $filename==location {
       $char: "\E011";
     }
 
-     @if $filename==pinterest {
+     @if $filename==mail {
       $char: "\E012";
     }
 
-     @if $filename==play {
+     @if $filename==multimedia {
       $char: "\E013";
     }
 
-     @if $filename==praises-clap {
+     @if $filename==pinterest {
       $char: "\E014";
     }
 
-     @if $filename==read {
+     @if $filename==play {
       $char: "\E015";
     }
 
-     @if $filename==search {
+     @if $filename==praises-clap {
       $char: "\E016";
     }
 
-     @if $filename==share {
+     @if $filename==read {
       $char: "\E017";
     }
 
-     @if $filename==time {
+     @if $filename==search {
       $char: "\E018";
     }
 
-     @if $filename==twitter {
+     @if $filename==share {
       $char: "\E019";
     }
 
-     @if $filename==upload {
+     @if $filename==time {
       $char: "\E01A";
     }
 
-     @if $filename==whatsapp {
+     @if $filename==twitter {
       $char: "\E01B";
     }
 
-     @if $filename==worship {
+     @if $filename==upload {
       $char: "\E01C";
+    }
+
+     @if $filename==whatsapp {
+      $char: "\E01D";
+    }
+
+     @if $filename==worship {
+      $char: "\E01E";
     }
 
     @return $char;
@@ -184,12 +192,20 @@
     @include icon(calendar);
   }
 
+  .icon-chevron-down {
+    @include icon(chevron-down);
+  }
+
   .icon-chevron-left {
     @include icon(chevron-left);
   }
 
   .icon-chevron-right {
     @include icon(chevron-right);
+  }
+
+  .icon-chevron-up {
+    @include icon(chevron-up);
   }
 
   .icon-close {

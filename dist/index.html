@@ -6,9 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/fonts.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js"> </script>
     <title>Pastor Chris Online</title>
   </head>
   <body>
+    <header class="header">
+      <nav class="nav nav--left">
+        <ul>
+          <li class="nav__item"><a class="nav__link" href="/about" title="about">About</a></li>
+          <li class="nav__item"><a class="nav__link" href="/watch" title="watch">Watch</a></li>
+          <li class="nav__item"><a class="nav__link" href="/read" title="read">Read</a></li>
+          <li class="nav__item"><a class="nav__link" href="/chronicles-of-prophecy" title="Chronicles of Prophecy">Chronicles of Prophecy</a></li>
+        </ul>
+      </nav><img class="logo" src="/assets/img/pastor-chris-online-logo.svg" alt="Pastor Chris Online Logo">
+      <nav class="nav nav--right">
+        <ul> 
+          <li class="nav__item"><a class="nav__link" href="/ask-pastor-chris" title="Ask Pastor Chris">Ask Pastor Chris</a></li>
+          <li class="nav__item"><a class="nav__link" href="/get-involved" title="Get Involved">Get Involved</a></li>
+        </ul>
+        <div class="search-btn js-global-search-control"></div>
+        <div class="hamburger-btn">
+          <div class="js-global-nav-btn" id="hamburger-menu"><span></span><span></span><span></span></div>
+        </div>
+      </nav>
+      <div class="global-search__wrapper js-global-search">
+        <div class="global-search">
+          <form class="global-search__form js-global-search-form" action="/search" method="get">
+            <input class="global-search__input js-global-search-input" type="search" placeholder="Search Pastor Chris Online" name="query" autocomplete="off">
+            <div class="pill pill global-search__advanced-btn js-global-search-advanced-control">Advanced Search</div>
+            <button class="global-search__search-btn"></button>
+          </form>
+          <div class="global-search__advanced-search__wrapper js-global-search-advanced">
+            <div class="global-search__advanced-search">
+              <div class="global-search__advanced-search__content"> 
+                <label for="content-type"> Content Type</label>
+                <div class="global-search__advanced-search__content__input">
+                  <select id="content-type" name="content-type" multiple placeholder="Select content type" data-plugins="remove_button,input_autogrow">
+                    <option value="video">Video</option>
+                    <option value="article">Article</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="book">Book</option>
+                  </select>
+                </div>
+              </div>
+              <div class="global-search__advanced-search__content"> 
+                <label for="category">Category</label>
+                <div class="global-search__advanced-search__content__input">
+                  <select id="category" name="category" multiple data-plugins="remove_button,input_autogrow" placeholder="Select content category"> 
+                    <option value="items">Items</option>
+                    <option value="events">Events</option>
+                    <option value="sermons">Sermons</option>
+                    <option value="articles">Articles</option>
+                    <option value="podcasts">Podcasts</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="global-search__results js-global-search-results">
+            <div class="global-search__results__header"><small>Global Search Results</small></div>
+          </div>
+        </div>
+      </div>
+      <menu class="global-nav-dropdown__wrapper js-global-nav-dropdown">
+        <div class="grid-container">
+          <div class="grid-x">
+            <div class="cell medium-8">
+              <div class="global-nav-dropdown">
+                <div class="global-nav-dropdown__column">
+                  <ul>
+                    <li><a href="/about" title="About">About</a></li>
+                    <li><a href="/watch" title="Watch">Watch</a></li>
+                    <li><a href="/live" title="Live">Live</a></li>
+                    <li><a href="/teachings" title="Teachings">Teachings</a></li>
+                    <li><a href="/q-and-a-with-pastor-chris" title="Q&amp;A With Pastor Chris">Q&amp;A With Pastor Chris</a></li>
+                    <li><a href="/testimonies" title="Testimonies">Testimonies</a></li>
+                    <li><a href="/loveworld-praise" title="LoveWorld Praise">LoveWorld Praise</a></li>
+                    <li><a href="/tv-stations-listings" title="TV Stations / Listings">TV Stations / Listings</a></li>
+                    <li><a href="/read" title="Read">Read</a></li>
+                    <li><a href="/daily-devotions" title="Daily Devotions">Daily Devotions</a></li>
+                    <li><a href="/affirmations" title="Affirmations">Affirmations</a></li>
+                    <li><a href="/blog" title="Blog">Blog</a></li>
+                    <li><a href="/chronicles-of-prophecies" title="Chronicles of Prophecies">Chronicles of Prophecies</a></li>
+                    <li><a href="/news-and-events" title="News &amp; Events">News &amp; Events</a></li>
+                  </ul>
+                </div>
+                <div class="global-nav-dropdown__column">
+                  <ul>
+                    <li><a href="/foundations" title="Foundations">Foundations</a></li>
+                    <li><a href="/future-africa-leaders" title="Future Africa Leaders">Future Africa Leaders</a></li>
+                    <li><a href="/Inner City Missions" title="Inner City Missions">Inner City Missions</a></li>
+                    <li><a href="/trauma-care-international" title="Trauma Care International">Trauma Care International</a></li>
+                    <li><a href="/volunteer-medical-corps" title="Volunteer Medical Corps">Volunteer Medical Corps</a></li>
+                    <li><a href="/bible-for-all-mission" title="Bible For All Missions">Bible For All Missions</a></li>
+                    <li><a href="/get-involved" title="Get Involved">Get Involved</a></li>
+                    <li><a href="/financial-partnerships" title="Financial Partnerships">Financial Partnerships</a></li>
+                    <li><a href="/become-a-prayer-partner" title="Become A Prayer Partner">Become A Prayer Partner</a></li>
+                    <li><a href="/international-school-of-ministry" title="International School of Ministry">International School of Ministry</a></li>
+                    <li><a href="/apps" title="Apps">Apps</a></li>
+                    <li><a href="/contact" title="Contact">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="cell medium-4 offset-1">
+              <div class="global-nav-dropdown__featured">
+                <div class="aspect-ratio--16x9">
+                  <div class="aspect-ratio__content"><img src="/assets/img/october-month-of-peace.png"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="global-nav-dropdown__close-btn js-global-nav-menu-close"></div>
+      </menu>
+    </header>
         <section class="d-section">
           <h2>Instructions</h2>
           <hr>
@@ -1854,13 +1966,9 @@
               </div>
             </div>
             <div class="cell grid-x grid-margin-x">
-              <div class="cell medium-4">
-                <label for="select">Select</label>
-                <select id="select" name="select" multiple>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
+              <div class="cell medium-4"> 
+                <label for="textarea">Textarea</label>
+                <textarea id="textarea" name="textarea" placeholder="textarea" rows="5"></textarea>
               </div>
               <div class="cell medium-4">
                 <label for="password">Radio Button</label>
@@ -1869,6 +1977,405 @@
               <div class="cell medium-4">
                 <label for="password">CheckBox</label>
                 <input id="radio" type="checkbox" name="checkbox">
+              </div>
+            </div>
+            <div class="cell medium-6">
+              <div class="cell">
+                <h6>Select dropdowns</h6>
+                <p>Select dropdowns have been customized to include pills, checkboxes and flags for special country options. To enable countries, add <code>data-country</code> to the select element.</p>
+              </div>
+            </div>
+            <div class="cell grid-x grid-margin-x medium-6">
+              <div class="cell">
+                <h6>Basic dropdown </h6>
+                <p>Use the select element as you would a regular HTML select element without any modification</p>
+                <label for="select">Basic Select</label>
+                <select id="select" name="select">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+              <div class="cell">
+                <h6>&nbsp;</h6>
+                <p><strong>Basic dropdown </strong></p>
+                <p>To enable multiple options, add <code>multiple</code> to the select element. This will enable pills for the selected elements</p>
+                <label for="select">Select with multiple options</label>
+                <select id="select" name="select" multiple>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                  <option value="4">Option 4</option>
+                  <option value="5">Option 5</option>
+                  <option value="6">Option 6</option>
+                </select>
+              </div>
+              <div class="cell">
+                <h6>&nbsp;</h6>
+                <p><strong>Select with Option Groups</strong></p>
+                <p>To enable option groups, add <code>optgroup</code> as children and nest the options inside the optgroup</p>
+                <label for="select">Select with optgroup</label>
+                <select id="select" name="select" multiple>
+                  <optgroup label="Group 1">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                  </optgroup>
+                  <optgroup label="Group 2">
+                    <option value="7">Option 7</option>
+                    <option value="8">Option 8</option>
+                    <option value="9">Option 9</option>
+                    <option value="10">Option 10</option>
+                    <option value="11">Option 11</option>
+                    <option value="12">Option 12</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="cell">
+                <h6>&nbsp;</h6>
+                <p><strong>Select with countries</strong></p>
+                <p>To enable countries, add <code>data-country</code> to the select element. This will enable flags for the selected elements. See the <code>src/ts/iso-countries.ts</code> for a list of countries and their iso2 codes.</p>
+                <label for="select-with-countries">Select with countries</label>
+                <select id="select-with-countries" data-country name="select" multiple placeholder="Select countries" data-plugins="remove_button,clear_button" autocomplete="off">
+                  <option value="afghanistan">Afghanistan</option>
+                  <option value="Åland islands">Åland Islands</option>
+                  <option value="albania">Albania</option>
+                  <option value="algeria">Algeria</option>
+                  <option value="american samoa">American Samoa</option>
+                  <option value="andorra">Andorra</option>
+                  <option value="angola">Angola</option>
+                  <option value="anguilla">Anguilla</option>
+                  <option value="antarctica">Antarctica</option>
+                  <option value="antigua and barbuda">Antigua and Barbuda</option>
+                  <option value="argentina">Argentina</option>
+                  <option value="armenia">Armenia</option>
+                  <option value="aruba">Aruba</option>
+                  <option value="australia">Australia</option>
+                  <option value="austria">Austria</option>
+                  <option value="azerbaijan">Azerbaijan</option>
+                  <option value="bahamas">Bahamas</option>
+                  <option value="bahrain">Bahrain</option>
+                  <option value="bangladesh">Bangladesh</option>
+                  <option value="barbados">Barbados</option>
+                  <option value="belarus">Belarus</option>
+                  <option value="belgium">Belgium</option>
+                  <option value="belize">Belize</option>
+                  <option value="benin">Benin</option>
+                  <option value="bermuda">Bermuda</option>
+                  <option value="bhutan">Bhutan</option>
+                  <option value="bolivia">Bolivia</option>
+                  <option value="bosnia and herzegovina">Bosnia and Herzegovina</option>
+                  <option value="botswana">Botswana</option>
+                  <option value="bouvet island">Bouvet Island</option>
+                  <option value="brazil">Brazil</option>
+                  <option value="british indian ocean territory">British Indian Ocean Territory</option>
+                  <option value="brunei darussalam">Brunei Darussalam</option>
+                  <option value="bulgaria">Bulgaria</option>
+                  <option value="burkina faso">Burkina Faso</option>
+                  <option value="burundi">Burundi</option>
+                  <option value="cambodia">Cambodia</option>
+                  <option value="cameroon">Cameroon</option>
+                  <option value="canada">Canada</option>
+                  <option value="cape verde">Cape Verde</option>
+                  <option value="cayman islands">Cayman Islands</option>
+                  <option value="central african republic">Central African Republic</option>
+                  <option value="chad">Chad</option>
+                  <option value="chile">Chile</option>
+                  <option value="china">China</option>
+                  <option value="christmas island">Christmas Island</option>
+                  <option value="cocos (keeling) islands">Cocos (Keeling) Islands</option>
+                  <option value="colombia">Colombia</option>
+                  <option value="comoros">Comoros</option>
+                  <option value="congo">Congo</option>
+                  <option value="congo drc">Democratic Republic of the Congo</option>
+                  <option value="cook islands">Cook Islands</option>
+                  <option value="costa rica">Costa Rica</option>
+                  <option value="côte d'ivoire">Côte D'Ivoire</option>
+                  <option value="croatia">Croatia</option>
+                  <option value="cuba">Cuba</option>
+                  <option value="cyprus">Cyprus</option>
+                  <option value="czech republic">Czech Republic</option>
+                  <option value="denmark">Denmark</option>
+                  <option value="djibouti">Djibouti</option>
+                  <option value="dominica">Dominica</option>
+                  <option value="dominican republic">Dominican Republic</option>
+                  <option value="ecuador">Ecuador</option>
+                  <option value="egypt">Egypt</option>
+                  <option value="el salvador">El Salvador</option>
+                  <option value="equatorial guinea">Equatorial Guinea</option>
+                  <option value="eritrea">Eritrea</option>
+                  <option value="estonia">Estonia</option>
+                  <option value="ethiopia">Ethiopia</option>
+                  <option value="falkland islands (malvinas)">Falkland Islands (Malvinas)</option>
+                  <option value="faroe islands">Faroe Islands</option>
+                  <option value="fiji">Fiji</option>
+                  <option value="finland">Finland</option>
+                  <option value="france">France</option>
+                  <option value="french guiana">French Guiana</option>
+                  <option value="french polynesia">French Polynesia</option>
+                  <option value="french southern territories">French Southern Territories</option>
+                  <option value="gabon">Gabon</option>
+                  <option value="gambia">Gambia</option>
+                  <option value="georgia">Georgia</option>
+                  <option value="germany">Germany</option>
+                  <option value="ghana">Ghana</option>
+                  <option value="gibraltar">Gibraltar</option>
+                  <option value="greece">Greece</option>
+                  <option value="greenland">Greenland</option>
+                  <option value="grenada">Grenada</option>
+                  <option value="guadeloupe">Guadeloupe</option>
+                  <option value="guam">Guam</option>
+                  <option value="guatemala">Guatemala</option>
+                  <option value="guernsey">Guernsey</option>
+                  <option value="guinea">Guinea</option>
+                  <option value="guinea-bissau">Guinea-Bissau</option>
+                  <option value="guyana">Guyana</option>
+                  <option value="haiti">Haiti</option>
+                  <option value="heard island and mcdonald islands">Heard Island and Mcdonald Islands</option>
+                  <option value="vatican">Holy See (Vatican)</option>
+                  <option value="honduras">Honduras</option>
+                  <option value="hong kong">Hong Kong</option>
+                  <option value="hungary">Hungary</option>
+                  <option value="iceland">Iceland</option>
+                  <option value="india">India</option>
+                  <option value="indonesia">Indonesia</option>
+                  <option value="iran">Iran</option>
+                  <option value="iraq">Iraq</option>
+                  <option value="ireland">Ireland</option>
+                  <option value="isle of man">Isle of Man</option>
+                  <option value="israel">Israel </option>
+                  <option value="italy">Italy</option>
+                  <option value="jamaica">Jamaica</option>
+                  <option value="japan">Japan</option>
+                  <option value="jersey">Jersey</option>
+                  <option value="jordan">Jordan</option>
+                  <option value="kazakhstan">Kazakhstan</option>
+                  <option value="kenya">Kenya</option>
+                  <option value="kiribati">Kiribati</option>
+                  <option value="democratic people's republic of korea">Korea Republic</option>
+                  <option value="republic of korea">Republic of Korea</option>
+                  <option value="kuwait">Kuwait</option>
+                  <option value="kyrgyzstan">Kyrgyzstan</option>
+                  <option value="lao people's democratic republic">Lao People's Democratic Republic</option>
+                  <option value="latvia">Latvia</option>
+                  <option value="lebanon">Lebanon</option>
+                  <option value="lesotho">Lesotho</option>
+                  <option value="liberia">Liberia</option>
+                  <option value="libya">Libya</option>
+                  <option value="liechtenstein">Liechtenstein</option>
+                  <option value="lithuania">Lithuania</option>
+                  <option value="luxembourg">Luxembourg</option>
+                  <option value="macao">Macao</option>
+                  <option value="macedonia">Macedonia</option>
+                  <option value="madagascar">Madagascar</option>
+                  <option value="malawi">Malawi</option>
+                  <option value="malaysia">Malaysia</option>
+                  <option value="maldives">Maldives</option>
+                  <option value="mali">Mali</option>
+                  <option value="malta">Malta</option>
+                  <option value="marshall islands">Marshall Islands</option>
+                  <option value="martinique">Martinique</option>
+                  <option value="mauritania">Mauritania</option>
+                  <option value="mauritius">Mauritius</option>
+                  <option value="mayotte">Mayotte</option>
+                  <option value="mexico">Mexico</option>
+                  <option value="micronesia">Micronesia</option>
+                  <option value="moldova">Moldova</option>
+                  <option value="monaco">Monaco</option>
+                  <option value="mongolia">Mongolia</option>
+                  <option value="montenegro">Montenegro</option>
+                  <option value="montserrat">Montserrat</option>
+                  <option value="morocco">Morocco</option>
+                  <option value="mozambique">Mozambique</option>
+                  <option value="myanmar">Myanmar</option>
+                  <option value="namibia">Namibia</option>
+                  <option value="nauru">Nauru</option>
+                  <option value="nepal">Nepal</option>
+                  <option value="netherlands">Netherlands</option>
+                  <option value="new caledonia">New Caledonia</option>
+                  <option value="new zealand">New Zealand</option>
+                  <option value="nicaragua">Nicaragua</option>
+                  <option value="niger">Niger</option>
+                  <option value="nigeria">Nigeria</option>
+                  <option value="niue">Niue</option>
+                  <option value="norfolk island">Norfolk Island</option>
+                  <option value="northern mariana islands">Northern Mariana Islands</option>
+                  <option value="norway">Norway</option>
+                  <option value="oman">Oman</option>
+                  <option value="pakistan">Pakistan</option>
+                  <option value="palau">Palau</option>
+                  <option value="palestine">Palestine</option>
+                  <option value="panama">Panama</option>
+                  <option value="papua new guinea">Papua New Guinea</option>
+                  <option value="paraguay">Paraguay</option>
+                  <option value="peru">Peru</option>
+                  <option value="philippines">Philippines</option>
+                  <option value="pitcairn">Pitcairn</option>
+                  <option value="poland">Poland</option>
+                  <option value="portugal">Portugal</option>
+                  <option value="puerto rico">Puerto Rico</option>
+                  <option value="qatar">Qatar</option>
+                  <option value="réunion">Réunion</option>
+                  <option value="romania">Romania</option>
+                  <option value="russian federation">Russian Federation</option>
+                  <option value="rwanda">Rwanda</option>
+                  <option value="saint barthélemy">Saint Barthélemy</option>
+                  <option value="saint helena, ascension and tristan da cunha"> </option>
+                  <option value="saint kitts and nevis">Saint Kitts and Nevis</option>
+                  <option value="saint lucia">Saint Lucia</option>
+                  <option value="saint martin (french part)">Saint Martin (French part)</option>
+                  <option value="saint pierre and miquelon">Saint Pierre and Miquelon</option>
+                  <option value="saint vincent and the grenadines">Saint Vincent and the Grenadines</option>
+                  <option value="samoa">Samoa</option>
+                  <option value="san marino">San Marino</option>
+                  <option value="sao tome and principe">Sao Tome and Principe</option>
+                  <option value="saudi arabia">Saudi Arabia</option>
+                  <option value="senegal">Senegal</option>
+                  <option value="serbia">Serbia</option>
+                  <option value="seychelles">Seychelles</option>
+                  <option value="sierra leone">Sierra Leone</option>
+                  <option value="singapore">Singapore</option>
+                  <option value="sint maarten (dutch part)">Sint Maarten (Dutch part)</option>
+                  <option value="slovakia">Slovakia</option>
+                  <option value="slovenia">Slovenia</option>
+                  <option value="solomon islands">Solomon Islands</option>
+                  <option value="somalia">Somalia</option>
+                  <option value="south africa">South Africa</option>
+                  <option value="south georgia and the south sandwich islands">South Georgia and the South Sandwich Islands</option>
+                  <option value="south sudan">South Sudan</option>
+                  <option value="spain">Spain</option>
+                  <option value="sri lanka">Sri Lanka</option>
+                  <option value="sudan">Sudan</option>
+                  <option value="suriname">Suriname</option>
+                  <option value="svalbard and jan mayen">Svalbard and Jan Mayen</option>
+                  <option value="swaziland">Swaziland</option>
+                  <option value="sweden">Sweden</option>
+                  <option value="switzerland">Switzerland</option>
+                  <option value="syrian arab republic">Syrian Arab Republic</option>
+                  <option value="taiwan">Taiwan</option>
+                  <option value="tajikistan">Tajikistan</option>
+                  <option value="tanzania">Tanzania</option>
+                  <option value="thailand">Thailand</option>
+                  <option value="timor-leste">Timor-Leste</option>
+                  <option value="togo">Togo</option>
+                  <option value="tokelau">Tokelau</option>
+                  <option value="tonga">Tonga</option>
+                  <option value="trinidad and tobago">Trinidad and Tobago</option>
+                  <option value="tunisia">Tunisia</option>
+                  <option value="turkey">Turkey</option>
+                  <option value="turkmenistan">Turkmenistan</option>
+                  <option value="turks and caicos islands">Turks and Caicos Islands</option>
+                  <option value="tuvalu">Tuvalu</option>
+                  <option value="uganda">Uganda</option>
+                  <option value="ukraine">Ukraine</option>
+                  <option value="united arab emirates">United Arab Emirates</option>
+                  <option value="united kingdom">United Kingdom</option>
+                  <option value="united states">United States</option>
+                  <option value="united states minor outlying islands">United States Minor Outlying Islands</option>
+                  <option value="uruguay">Uruguay</option>
+                  <option value="uzbekistan">Uzbekistan</option>
+                  <option value="vanuatu">Vanuatu</option>
+                  <option value="venezuela">Venezuela</option>
+                  <option value="vietnam">Vietnam</option>
+                  <option value="virgin islands, british">British Virgin Islands</option>
+                  <option value="virgin islands, u.s.">US Virgin Islands</option>
+                  <option value="wallis and futuna">Wallis and Futuna</option>
+                  <option value="western sahara">Western Sahara</option>
+                  <option value="yemen">Yemen</option>
+                  <option value="zambia">Zambia</option>
+                  <option value="zimbabwe">Zimbabwe</option>
+                </select>
+              </div>
+              <div class="cell">
+                <h6>&nbsp;</h6>
+                <h6>Enabling creation of new options </h6>
+                <p>You can enable the creation of new options by adding the <strong>data-enable-create</strong> attribute. This will add a new option to the list when the user types in a value that doesn't exist in the list.</p>
+                <label for="enable-create">Enable create</label>
+                <select id="enable-create" data-enable-create placeholder="Options with ability to create new options..." multiple>
+                  <option value="Option One">Option One</option>
+                  <option value="Option Two">Option Two</option>
+                  <option value="Option Three">Option Three</option>
+                  <option value="Option Four">Option Four</option>
+                  <option value="Option Five">Option Five</option>
+                  <option value="Option Six">Option Six</option>
+                  <option value="Option Seven">Option Seven</option>
+                  <option value="Option Eight">Option Eight</option>
+                  <option value="Option Nine">Option Nine</option>
+                  <option value="Option Ten">Option Ten</option>
+                </select>
+              </div>
+              <div class="cell">
+                <h6>&nbsp;</h6>
+                <h6>Select with filter view</h6>
+                <p>You can change the select type to filter view by adding the <strong>data-filter</strong> attribute. </p>
+                <label for="data-filter">Filter view</label>
+                <select id="data-filter" data-filter placeholder="Options with filter view..." multiple>
+                  <option value="Option One">Option One</option>
+                  <option value="Option Two">Option Two</option>
+                  <option value="Option Three">Option Three</option>
+                  <option value="Option Four">Option Four</option>
+                  <option value="Option Five">Option Five</option>
+                  <option value="Option Six">Option Six</option>
+                  <option value="Option Seven">Option Seven</option>
+                  <option value="Option Eight">Option Eight</option>
+                  <option value="Option Nine">Option Nine</option>
+                  <option value="Option Ten">Option Ten</option>
+                </select>
+              </div>
+              <div class="cell">
+                <h6>&nbsp;</h6>
+                <h6>Using plugins</h6>
+                <p>You can use plugins to add extra functionality to your form. Avaialble plugins include <strong>remove_button</strong> which adds a remove button to each pill element. <strong>dropdown_input</strong> shows a dropdown list for filtering items. To add a plugin, add the plugin name to the <strong>data-plugins</strong> attribute. You can add multiple plugins by separating them with a comma. See <a href="https://tom-select.js.org/plugins/">https://tom-select.js.org/plugins/</a> for all available plugins.</p>
+                <label for="with-plugins">Using Plugins</label>
+                <select id="with-plugins" multiple placeholder="Select options..." data-plugins="remove_button,dropdown_input,caret_position,checkbox_options,clear_button,dropdown_input,input_autogrow,no_active_items,no_backspace_delete,optgroup_columns,restore_on_backspace">
+                  <optgroup label="Group One">
+                    <option value="Option One">Option One</option>
+                    <option value="Option Two">Option Two</option>
+                    <option value="Option Three">Option Three</option>
+                    <option value="Option Four">Option Four</option>
+                    <option value="Option Five">Option Five</option>
+                    <option value="Option Six">Option Six</option>
+                  </optgroup>
+                  <optgroup label="Group Two">
+                    <option value="Option Seven">Option Seven</option>
+                    <option value="Option Eight">Option Eight</option>
+                    <option value="Option Nine">Option Nine</option>
+                    <option value="Option Ten">Option Ten</option>
+                    <option value="Option Eleven">Option Eleven</option>
+                    <option value="Option Twelve">Option Twelve</option>
+                  </optgroup>
+                  <optgroup label="Group Three">
+                    <option value="Option Thirteen">Option Thirteen</option>
+                    <option value="Option Fourteen">Option Fourteen</option>
+                    <option value="Option Fifteen">Option Fifteen</option>
+                    <option value="Option Sixteen">Option Sixteen</option>
+                    <option value="Option Seventeen">Option Seventeen</option>
+                    <option value="Option Eighteen">Option Eighteen</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="cell">
+                <h6>&nbsp;</h6>
+                <h6>General Configuration</h6>
+                <p>You can pass in general configuration options to the select element. See <a href="https://tom-select.js.org/docs/" target="_blank">https://tom-select.js.org/docs/</a> for all available options.</p>
+                <label for="with-plugins">With plugins</label>
+                <select id="with-plugins" multiple placeholder="Select options..." data-options="{ &quot;create&quot;: true, &quot;createOnBlur&quot;: true, &quot;createFilter&quot;: &quot;^[a-zA-Z0-9]+$&quot;, &quot;delimeter&quot;: &quot;,&quot;, &quot;highlight&quot;: true, &quot;persist&quot;: false, &quot;closeAfterSelect&quot;: true, &quot;allowEmptyOption&quot;: false, &quot;loadThrottle&quot;: 200, &quot;loadingClass&quot;: &quot;loading&quot;, &quot;placeholder&quot;: &quot;Select Options&quot;, &quot;hidePlaceholder&quot;: true, &quot;preload&quot;: false, &quot;dropdownParent&quot;: null, &quot;addPrecedence&quot;: null, &quot;selectOnTab&quot;: false, &quot;diacritics&quot;: true, &quot;duplicates&quot;: false }">
+                  <option value="Option One">Option One</option>
+                  <option value="Option Two">Option Two</option>
+                  <option value="Option Three">Option Three</option>
+                  <option value="Option Four">Option Four</option>
+                  <option value="Option Five">Option Five</option>
+                  <option value="Option Six">Option Six</option>
+                  <option value="Option Seven">Option Seven</option>
+                  <option value="Option Eight">Option Eight</option>
+                  <option value="Option Nine">Option Nine</option>
+                  <option value="Option Ten">Option Ten</option>
+                  <option value="Option Eleven">Option Eleven</option>
+                  <option value="Option Twelve">Option Twelve</option>
+                </select>
               </div>
             </div>
           </div>

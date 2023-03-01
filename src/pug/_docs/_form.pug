@@ -3,23 +3,153 @@
     .cell.grid-x.grid-margin-x
       .cell.medium-auto
         label(for="Text") Input Label
-        input#text(type="text", name="text", placeholder="text")
+        input#text(type="text" name="text" placeholder="text")
       .cell.medium-auto
         label(for="email") Email
-        input#email(type="email", name="email", placeholder="email")
+        input#email(type="email" name="email" placeholder="email")
       .cell.medium-auto
         label(for="password") Password
-        input#password(type="password", name="password", placeholder="password")
+        input#password(type="password" name="password" placeholder="password")
     .cell.grid-x.grid-margin-x
+      .cell.medium-4 
+        label(for="textarea") Textarea
+        textarea#textarea(name="textarea" placeholder="textarea" rows="5")
       .cell.medium-4
-        label(for="select") Select
+        label(for="password") Radio Button
+        input#radio(type="radio" name="radio") 
+      .cell.medium-4
+        label(for="password") CheckBox
+        input#radio(type="checkbox" name="checkbox") 
+    .cell.medium-6
+      .cell
+        h6 Select dropdowns
+        p Select dropdowns have been customized to include pills, checkboxes and flags for special country options. To enable countries, add <code>data-country</code> to the select element.
+    .cell.grid-x.grid-margin-x.medium-6
+      .cell
+        h6 Basic dropdown 
+        p Use the select element as you would a regular HTML select element without any modification
+        label(for="select") Basic Select
+        select#select(name="select")
+          option(value="1") Option 1
+          option(value="2") Option 2
+          option(value="3") Option 3
+      .cell
+        h6 &nbsp;
+        p: strong Basic dropdown 
+        p To enable multiple options, add <code>multiple</code> to the select element. This will enable pills for the selected elements
+        label(for="select") Select with multiple options
         select#select(name="select" multiple)
           option(value="1") Option 1
           option(value="2") Option 2
           option(value="3") Option 3
-      .cell.medium-4
-        label(for="password") Radio Button
-        input#radio(type="radio", name="radio") 
-      .cell.medium-4
-        label(for="password") CheckBox
-        input#radio(type="checkbox", name="checkbox") 
+          option(value="4") Option 4
+          option(value="5") Option 5
+          option(value="6") Option 6
+      .cell
+        h6 &nbsp;
+        p: strong Select with Option Groups
+        p To enable option groups, add <code>optgroup</code> as children and nest the options inside the optgroup
+        label(for="select") Select with optgroup
+        select#select(name="select" multiple)
+          optgroup(label="Group 1")
+            option(value="1") Option 1
+            option(value="2") Option 2
+            option(value="3") Option 3
+            option(value="4") Option 4
+            option(value="5") Option 5
+            option(value="6") Option 6
+          optgroup(label="Group 2")
+            option(value="7") Option 7
+            option(value="8") Option 8
+            option(value="9") Option 9
+            option(value="10") Option 10
+            option(value="11") Option 11
+            option(value="12") Option 12
+      .cell
+          h6 &nbsp;
+          p: strong Select with countries
+          p To enable countries, add <code>data-country</code> to the select element. This will enable flags for the selected elements. See the <code>src/ts/iso-countries.ts</code> for a list of countries and their iso2 codes.
+          label(for="select-with-countries") Select with countries
+          select#select-with-countries(data-country name="select" multiple placeholder="Select countries" data-plugins="remove_button,clear_button" autocomplete="off")
+            include /_docs/_country-options
+      .cell
+        h6 &nbsp;
+        h6 Enabling creation of new options 
+        p You can enable the creation of new options by adding the <strong>data-enable-create</strong> attribute. This will add a new option to the list when the user types in a value that doesn't exist in the list.
+        label(for="enable-create") Enable create
+        select#enable-create(data-enable-create placeholder="Options with ability to create new options..." multiple)
+          option(value="Option One") Option One
+          option(value="Option Two") Option Two
+          option(value="Option Three") Option Three
+          option(value="Option Four") Option Four
+          option(value="Option Five") Option Five
+          option(value="Option Six") Option Six
+          option(value="Option Seven") Option Seven
+          option(value="Option Eight") Option Eight
+          option(value="Option Nine") Option Nine
+          option(value="Option Ten") Option Ten
+      .cell
+        h6 &nbsp;
+        h6 Select with filter view
+        p You can change the select type to filter view by adding the <strong>data-filter</strong> attribute. 
+        label(for="data-filter") Filter view
+        select#data-filter(data-filter placeholder="Options with filter view..." multiple)
+          option(value="Option One") Option One
+          option(value="Option Two") Option Two
+          option(value="Option Three") Option Three
+          option(value="Option Four") Option Four
+          option(value="Option Five") Option Five
+          option(value="Option Six") Option Six
+          option(value="Option Seven") Option Seven
+          option(value="Option Eight") Option Eight
+          option(value="Option Nine") Option Nine
+          option(value="Option Ten") Option Ten
+
+      .cell
+        h6 &nbsp;
+        h6 Using plugins
+        p
+          | You can use plugins to add extra functionality to your form. Avaialble plugins include <strong>remove_button</strong> which adds a remove button to each pill element. <strong>dropdown_input</strong> shows a dropdown list for filtering items. To add a plugin, add the plugin name to the <strong>data-plugins</strong> attribute. You can add multiple plugins by separating them with a comma. See <a href="https://tom-select.js.org/plugins/">https://tom-select.js.org/plugins/</a> for all available plugins.
+        label(for="with-plugins") Using Plugins
+        select#with-plugins(multiple placeholder="Select options..." data-plugins="remove_button,dropdown_input,caret_position,checkbox_options,clear_button,dropdown_input,input_autogrow,no_active_items,no_backspace_delete,optgroup_columns,restore_on_backspace")
+          optgroup(label="Group One")
+            option(value="Option One") Option One
+            option(value="Option Two") Option Two
+            option(value="Option Three") Option Three
+            option(value="Option Four") Option Four
+            option(value="Option Five") Option Five
+            option(value="Option Six") Option Six
+          optgroup(label="Group Two")
+            option(value="Option Seven") Option Seven
+            option(value="Option Eight") Option Eight
+            option(value="Option Nine") Option Nine
+            option(value="Option Ten") Option Ten
+            option(value="Option Eleven") Option Eleven
+            option(value="Option Twelve") Option Twelve
+          optgroup(label="Group Three")
+            option(value="Option Thirteen") Option Thirteen
+            option(value="Option Fourteen") Option Fourteen
+            option(value="Option Fifteen") Option Fifteen
+            option(value="Option Sixteen") Option Sixteen
+            option(value="Option Seventeen") Option Seventeen
+            option(value="Option Eighteen") Option Eighteen
+      
+      .cell
+        h6 &nbsp;
+        h6 General Configuration
+        p You can pass in general configuration options to the select element. See <a href="https://tom-select.js.org/docs/" target="_blank">https://tom-select.js.org/docs/</a> for all available options.
+
+        label(for="with-plugins") With plugins
+        select#with-plugins(multiple placeholder="Select options..." data-options='{ "create": true, "createOnBlur": true, "createFilter": "^[a-zA-Z0-9]+$", "delimeter": ",", "highlight": true, "persist": false, "closeAfterSelect": true, "allowEmptyOption": false, "loadThrottle": 200, "loadingClass": "loading", "placeholder": "Select Options", "hidePlaceholder": true, "preload": false, "dropdownParent": null, "addPrecedence": null, "selectOnTab": false, "diacritics": true, "duplicates": false }')
+          option(value="Option One") Option One
+          option(value="Option Two") Option Two
+          option(value="Option Three") Option Three
+          option(value="Option Four") Option Four
+          option(value="Option Five") Option Five
+          option(value="Option Six") Option Six
+          option(value="Option Seven") Option Seven
+          option(value="Option Eight") Option Eight
+          option(value="Option Nine") Option Nine
+          option(value="Option Ten") Option Ten
+          option(value="Option Eleven") Option Eleven
+          option(value="Option Twelve") Option Twelve
