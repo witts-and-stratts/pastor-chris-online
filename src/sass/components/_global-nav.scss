@@ -1,9 +1,12 @@
-
 .global-nav-dropdown {
   left: 0;
   display: flex;
   padding-left: 0;
   flex-direction: column;
+
+  @include breakpoint(small only) {
+    padding-bottom: rem-calc(68);
+  }
 
   @include breakpoint(medium up) {
     flex-direction: row;
@@ -17,7 +20,6 @@
     top: calc(100% - 20px);
     padding: rem-calc(24) rem-calc(16) rem-calc(48) rem-calc(16);
     filter: drop-shadow(rem-calc(0) rem-calc(100) rem-calc(100) rgba($navy, 0.3));
-    // height: 90vh;
     z-index: 80;
     background-color: $electric;
     height: 0;
@@ -25,7 +27,7 @@
     visibility: hidden;
 
     @include breakpoint(medium up) {
-      padding-top: rem-calc(48);
+      padding-top: rem-calc(36);
     }
   }
 
@@ -35,13 +37,67 @@
     align-items: flex-start;
     margin-bottom: 0;
 
+    ul {
+      margin-bottom: 0;
+    }
+
     li {
       display: block;
       list-style-type: none;
+
+      &.has-submenu {
+        position: relative;
+        @include icon(chevron-down, before);
+        transition: all 0.3s ease-out;
+
+        &:before {
+          position: absolute;
+          @extend .icon-16;
+          @extend .medium-icon-24;
+          color: $white;
+          left: rem-calc(-24);
+          margin-top: rem-calc(-8);
+          margin-left: rem-calc(-8);
+          padding: rem-calc(8);
+          cursor: pointer;
+
+          @include breakpoint(medium up) {
+            left: rem-calc(-48);
+            padding: rem-calc(16);
+            margin-top: rem-calc(-20);
+            margin-left: rem-calc(-8);
+          }
+        }
+
+        &.open {
+          @include icon(chevron-up, before);
+        }
+
+        a {
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+
+      ul {
+        margin-top: 0;
+        visibility: hidden;
+        overflow: hidden;
+
+        li {
+          visibility: hidden;
+          position: relative;
+        }
+
+        a {
+          color: $electric-light-30;
+        }
+      }
     }
     a {
       @extend .h5;
-      display: block;
+      display: inline-block;
       text-align: left;
       color: $white;
       transition: transform 0.3s ease-out, color 0.3s ease-out;
@@ -82,7 +138,8 @@
     padding: rem-calc(16);
     filter: drop-shadow(0 rem-calc(30) rem-calc(30) rgba($navy, 0.3));
 
-    a, [class$="title"] {
+    a,
+    [class$="title"] {
       color: $white !important;
     }
   }

@@ -6,7 +6,7 @@ menu.global-nav-dropdown__wrapper.js-global-nav-dropdown
       { href: '/live', title: 'Live' },
       { href: '/teachings', title: 'Teachings' },
       { href: '/q-and-a-with-pastor-chris', title: 'Q&A With Pastor Chris' },
-      { href: '/testimonies', title: 'Testimonies' },
+      { href: '/testimonies', title: 'Testimonies'},
       { href: '/loveworld-praise', title: 'LoveWorld Praise'},
       { href: '/tv-stations-listings', title: 'TV Stations / Listings'},
       { href: '/read', title: 'Read' },
@@ -17,12 +17,13 @@ menu.global-nav-dropdown__wrapper.js-global-nav-dropdown
       { href: '/news-and-events', title: 'News & Events'},
     ]
     const links2 = [
-      { href: '/foundations', title: 'Foundations'},
-      { href: '/future-africa-leaders', title: 'Future Africa Leaders'},
-      { href: '/Inner City Missions', title: 'Inner City Missions'},
-      { href: '/trauma-care-international', title: 'Trauma Care International'},
-      { href: '/volunteer-medical-corps', title: 'Volunteer Medical Corps'},
-      { href: '/bible-for-all-mission', title: 'Bible For All Missions'},
+      { href: '#', title: 'Foundations', submenu: [
+        { href: '/future-africa-leaders', title: 'Future Africa Leaders'},
+        { href: '/Inner City Missions', title: 'Inner City Missions'},
+        { href: '/trauma-care-international', title: 'Trauma Care International'},
+        { href: '/volunteer-medical-corps', title: 'Volunteer Medical Corps'},
+        { href: '/bible-for-all-mission', title: 'Bible For All Missions'},
+      ]},
       { href: '/get-involved', title: 'Get Involved'},
       { href: '/financial-partnerships', title: 'Financial Partnerships'},
       { href: '/become-a-prayer-partner', title: 'Become A Prayer Partner'},
@@ -37,12 +38,24 @@ menu.global-nav-dropdown__wrapper.js-global-nav-dropdown
           .global-nav-dropdown__column
             ul
               each link in links1
-                li: a(href=link.href title=link.title)= link.title
+                - const subMenuClass = link.submenu ? 'has-submenu' : ''
+                li(class=subMenuClass)
+                  a(href=link.href title=link.title)= link.title
+                  if link.submenu
+                    ul
+                      each submenu in link.submenu
+                        li: a(href=submenu.href title=submenu.title)= submenu.title
 
           .global-nav-dropdown__column
             ul
               each link in links2
-                li: a(href=link.href title=link.title)= link.title
+                - const subMenuClass = link.submenu ? 'has-submenu' : ''
+                li(class=subMenuClass)
+                  a(href=link.href title=link.title)= link.title
+                  if link.submenu
+                    ul
+                      each submenu in link.submenu
+                        li: a(href=submenu.href title=submenu.title)= submenu.title
       .cell.medium-4.offset-1
         .global-nav-dropdown__featured
           .aspect-ratio--16x9

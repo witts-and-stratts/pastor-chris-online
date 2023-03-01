@@ -1,6 +1,6 @@
 import buildCustomSelect from './custom-select';
 import GlobalSearch from './global-search';
-import NavMenu from './nav-menu';
+import GlobalNav from './global-nav';
 
 // Instantiate select elements on windows load
 window.onload = function () {
@@ -22,9 +22,10 @@ window.onload = function () {
     },
   } )
   
-  const navMenu = new NavMenu( {
+  const navMenu = new GlobalNav( {
     elem: document.querySelector( '.js-global-nav-dropdown' ),
     controlElem: document.querySelector( '.js-global-nav-btn' ),
     closeElem: document.querySelector( '.js-global-nav-menu-close' ),
+    submenuClass: 'has-submenu'
   });
 };

@@ -25,7 +25,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.d-folder-closed:before, .d-folder-open:before, .header .search-btn:before, .ts-wrapper.plugin-remove_button .item .remove:after, .ts-wrapper.ts-filter .ts-control:after, .plugin-clear_button .clear-button:after, .ts-control:after, .global-nav-dropdown__close-btn:after, .global-search__search-btn:before, .menu-dropdown__close-btn:after, .video-thumb--featured .video-thumb__poster:before, .video-thumb:before, .video-thumb--featured:before, .breadcrumb__main-header + .breadcrumb__sub-header:last-of-type:after, .breadcrumb__sub-header + .breadcrumb__sub-header:last-of-type:after, .icon-worship:before, .icon-whatsapp:before, .icon-upload:before, .icon-twitter:before, .icon-time:before, .icon-share:before, .icon-search:before, .icon-read:before, .icon-praises-clap:before, .icon-play:before, .icon-pinterest:before, .icon-multimedia:before, .icon-mail:before, .icon-location:before, .icon-live:before, .icon-healing:before, .icon-folder-open:before, .icon-folder-closed:before, .icon-filter:before, .icon-facebook:before, .icon-download:before, .icon-devotion:before, .icon-close:before, .icon-chevron-up:before, .icon-chevron-right:before, .icon-chevron-left:before, .icon-chevron-down:before, .icon-calendar:before, .icon-bell:before, .icon-audio:before {
+.d-folder-closed:before, .d-folder-open:before, .header .search-btn:before, .ts-wrapper.plugin-remove_button .item .remove:after, .ts-wrapper.ts-filter .ts-control:after, .plugin-clear_button .clear-button:after, .ts-control:after, .global-nav-dropdown__close-btn:after, .global-nav-dropdown__column li.has-submenu.open:before, .global-nav-dropdown__column li.has-submenu:before, .global-search__search-btn:before, .menu-dropdown__close-btn:after, .video-thumb--featured .video-thumb__poster:before, .video-thumb:before, .video-thumb--featured:before, .breadcrumb__main-header + .breadcrumb__sub-header:last-of-type:after, .breadcrumb__sub-header + .breadcrumb__sub-header:last-of-type:after, .icon-worship:before, .icon-whatsapp:before, .icon-upload:before, .icon-twitter:before, .icon-time:before, .icon-share:before, .icon-search:before, .icon-read:before, .icon-praises-clap:before, .icon-play:before, .icon-pinterest:before, .icon-multimedia:before, .icon-mail:before, .icon-location:before, .icon-live:before, .icon-healing:before, .icon-folder-open:before, .icon-folder-closed:before, .icon-filter:before, .icon-facebook:before, .icon-download:before, .icon-devotion:before, .icon-close:before, .icon-chevron-up:before, .icon-chevron-right:before, .icon-chevron-left:before, .icon-chevron-down:before, .icon-calendar:before, .icon-bell:before, .icon-audio:before {
   font-family: "iconfonts";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3751,7 +3751,7 @@ select:not([multiple]) {
   }
 }
 
-.icon-16 {
+.icon-16, .global-nav-dropdown__column li.has-submenu:before {
   font-size: 1rem;
 }
 
@@ -3788,7 +3788,7 @@ select:not([multiple]) {
 }
 
 @media print, screen and (min-width: 40em) {
-  .medium-icon-24 {
+  .medium-icon-24, .global-nav-dropdown__column li.has-submenu:before {
     font-size: 1.5rem;
   }
 }
@@ -6834,6 +6834,91 @@ label {
   margin-bottom: 0.25rem;
 }
 
+input[type=checkbox].custom-checkbox,
+input[type=radio].custom-radio {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+input[type=checkbox].custom-checkbox + label,
+input[type=radio].custom-radio + label {
+  position: relative;
+  padding: 0.5rem 0 0 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+input[type=checkbox].custom-checkbox + label:before,
+input[type=radio].custom-radio + label:before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.0625rem solid #a2a7b3;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  text-align: center;
+  transition: background 200ms ease-out;
+}
+input[type=checkbox].custom-checkbox + label:after,
+input[type=radio].custom-radio + label:after {
+  content: "";
+  position: absolute;
+  transform: scale(0);
+  transition: transform 200ms ease-out;
+}
+
+input[type=checkbox].custom-checkbox + label:after {
+  background-color: transparent;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 1rem;
+  opacity: 0.1;
+  border-bottom: 0.125rem solid #a2a7b3;
+  border-right: 0.125rem solid #a2a7b3;
+  transform: rotate(45deg);
+  transition: border-color 0.3s ease;
+}
+input[type=checkbox].custom-checkbox:checked + label:before {
+  content: "";
+  box-shadow: 0 0 1.25rem 0 rgba(143, 0, 255, 0.15);
+  border: 0.0625rem solid #bc66ff;
+}
+input[type=checkbox].custom-checkbox:checked + label:after {
+  content: "";
+  opacity: 1;
+  border-bottom: 3px solid #bc66ff;
+  border-right: 3px solid #bc66ff;
+}
+
+input[type=radio].custom-radio + label:before, input[type=radio].custom-radio + label:after {
+  border-radius: 50%;
+}
+input[type=radio].custom-radio + label:after {
+  left: 0.28rem;
+  top: 0.78rem;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+input[type=radio].custom-radio:checked + label:before {
+  animation: borderscale 300ms ease-in;
+}
+input[type=radio].custom-radio:checked + label:after {
+  background: #bc66ff;
+  transform: scale(1);
+}
+
 .hamburger-btn {
   overflow: hidden;
   max-width: 100%;
@@ -7134,6 +7219,11 @@ label {
   padding-left: 0;
   flex-direction: column;
 }
+@media print, screen and (max-width: 39.99875em) {
+  .global-nav-dropdown {
+    padding-bottom: 4.25rem;
+  }
+}
 @media print, screen and (min-width: 40em) {
   .global-nav-dropdown {
     flex-direction: row;
@@ -7155,7 +7245,7 @@ label {
 }
 @media print, screen and (min-width: 40em) {
   .global-nav-dropdown__wrapper {
-    padding-top: 3rem;
+    padding-top: 2.25rem;
   }
 }
 
@@ -7165,12 +7255,57 @@ label {
   align-items: flex-start;
   margin-bottom: 0;
 }
+.global-nav-dropdown__column ul {
+  margin-bottom: 0;
+}
 .global-nav-dropdown__column li {
   display: block;
   list-style-type: none;
 }
+.global-nav-dropdown__column li.has-submenu {
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+.global-nav-dropdown__column li.has-submenu:before {
+  content: "\e004";
+}
+.global-nav-dropdown__column li.has-submenu:before {
+  position: absolute;
+  color: #ffffff;
+  left: -1.5rem;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+@media print, screen and (min-width: 40em) {
+  .global-nav-dropdown__column li.has-submenu:before {
+    left: -3rem;
+    padding: 1rem;
+    margin-top: -1.25rem;
+    margin-left: -0.5rem;
+  }
+}
+.global-nav-dropdown__column li.has-submenu.open:before {
+  content: "\e007";
+}
+.global-nav-dropdown__column li.has-submenu a:hover {
+  color: #ffffff;
+}
+.global-nav-dropdown__column li ul {
+  margin-top: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+.global-nav-dropdown__column li ul li {
+  visibility: hidden;
+  position: relative;
+}
+.global-nav-dropdown__column li ul a {
+  color: #d299ff;
+}
 .global-nav-dropdown__column a {
-  display: block;
+  display: inline-block;
   text-align: left;
   color: #ffffff;
   transition: transform 0.3s ease-out, color 0.3s ease-out;
@@ -7204,7 +7339,8 @@ label {
   padding: 1rem;
   filter: drop-shadow(0 1.875rem 1.875rem rgba(0, 0, 128, 0.3));
 }
-.global-nav-dropdown__featured a, .global-nav-dropdown__featured [class$=title] {
+.global-nav-dropdown__featured a,
+.global-nav-dropdown__featured [class$=title] {
   color: #ffffff !important;
 }
 
@@ -8432,6 +8568,13 @@ xx-small,
   .footer__newsletter-signup {
     padding-left: 4rem;
   }
+}
+.footer__newsletter-signup input {
+  background-color: transparent;
+  color: #ffffff;
+}
+.footer__newsletter-signup input:focus {
+  background-color: transparent;
 }
 .footer__copyright {
   margin-bottom: 1rem;

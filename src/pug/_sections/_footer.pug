@@ -1,7 +1,7 @@
 .grid-container.full.footer
   .footer__content
     .grid-x
-      .cell.medium-2.large-2.footer__logo
+      .cell.medium-2.large-1.footer__logo
         img(src="/assets/img/pastor-chris-online-logo-white.svg" alt="Pastor Chris Online")
       .cell.medium-8.medium-offset-1.large-6.grid-x.medium-up-3.footer__links
         - 
@@ -23,13 +23,13 @@
                 - const l = link.toLowerCase().replace(/ /g, "-")
                 a(href=l)= link
 
-      //- .cell.large-auto.footer__newsletter-signup
-      //-   h5.footer__newsletter-signup__header Newsletter Signup
-      //-   p Get the PastorChris Online newsletter
-      //-   form(action="/newsletter-signup" method="POST").grid-x
-      //-     .cell: input(type="text" name="full_name" placeholder="Full Name")
-      //-     .cell: input(type="email" name="email" placeholder="Email Address")
-      //-     .cell: button.button(type="submit" value="Signup") Signup
+      .cell.large-auto.footer__newsletter-signup
+        h5.footer__newsletter-signup__header Newsletter Signup
+        p Get the PastorChris Online newsletter
+        form(action="/newsletter-signup" method="POST").grid-x
+          .cell: input(type="text" name="full_name" placeholder="Full Name")
+          .cell: input(type="email" name="email" placeholder="Email Address")
+          .cell: button.button(type="submit" value="Signup") Signup
 
     .grid-x.footer__copyright
       .cell

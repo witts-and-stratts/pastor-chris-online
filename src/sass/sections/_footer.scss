@@ -68,6 +68,15 @@
     @include breakpoint(large up) {
       padding-left: rem-calc(64);
     }
+
+    input {
+      background-color: transparent;
+      color: $white;
+
+      &:focus {
+        background-color: transparent;
+      }
+    }
   }
 
   &__copyright {
